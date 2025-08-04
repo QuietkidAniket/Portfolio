@@ -23,10 +23,10 @@ export default function DesktopIcons({ onOpenApp }: DesktopIconsProps) {
           style={{ left: icon.x, top: icon.y }}
         >
           <div className="flex flex-col items-center space-y-1">
-            <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center text-2xl group-hover:bg-white/20 transition-colors">
+            <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center text-2xl group-hover:bg-white/20 transition-colors shadow-lg">
               {icon.icon}
             </div>
-            <span className="text-white text-xs font-medium bg-black/50 px-2 py-1 rounded">{icon.title}</span>
+            <span className="text-white text-xs font-medium bg-black/50 px-2 py-1 rounded macos-font">{icon.title}</span>
           </div>
         </button>
       ))}

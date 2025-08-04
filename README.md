@@ -1,6 +1,6 @@
 # 🍎 macOS Portfolio Website
 
-A fully functional macOS-style portfolio website with authentic desktop environment, window management, and interactive terminal. Built with Next.js, TypeScript, and Tailwind CSS.
+A fully functional macOS-style portfolio website with authentic desktop environment, window management, interactive terminal, and background music player. Built with Next.js, TypeScript, and Tailwind CSS.
 
 ![Portfolio Preview](https://via.placeholder.com/800x500/1a1a1a/ffffff?text=macOS+Portfolio+Preview)
 
@@ -23,12 +23,21 @@ A fully functional macOS-style portfolio website with authentic desktop environm
 7. **⚡ Terminal** - Fully functional bash-like terminal with custom commands
 8. **👤 About Me** - Personal information and system details
 
+### 🎵 **Background Music System**
+- **Music Player**: Full-featured music player with play/pause, skip, and volume controls
+- **Multiple Tracks**: Support for multiple background music files
+- **Volume Control**: Adjustable volume with mute functionality
+- **Track Information**: Display track titles and descriptions
+- **Seek Control**: Jump to any part of the current track
+
 ### 🖥️ **Advanced Terminal Features**
-- **Custom Commands**: 25+ portfolio-specific commands
+- **Custom Commands**: 30+ portfolio-specific commands with proper error handling
 - **Auto-completion**: Tab completion for all commands
 - **Command History**: Navigate with arrow keys
 - **Colored Output**: ANSI color support for beautiful formatting
 - **Interactive Features**: Real-time system information
+- **macOS Terminal Font**: Authentic SF Mono font styling
+- **Enhanced Neofetch**: Custom ASCII art displaying "ANIKET" elegantly
 
 ### 🎮 **Interactive Features**
 - **Keyboard Shortcuts**: 
@@ -40,6 +49,8 @@ A fully functional macOS-style portfolio website with authentic desktop environm
 - **Window Snapping**: Drag windows to screen edges
 - **Fullscreen Mode**: Double-click window header or use green button
 - **Multi-window Support**: Open multiple instances of different apps
+- **Fully Resizable Windows**: Drag window edges and corners to resize
+- **Smooth Animations**: macOS-style transitions and hover effects
 
 ## 🛠️ **Tech Stack**
 
@@ -49,6 +60,7 @@ A fully functional macOS-style portfolio website with authentic desktop environm
 - **UI Components**: shadcn/ui
 - **Icons**: Lucide React
 - **State Management**: React Hooks (useState, useCallback, useRef)
+- **Fonts**: SF Pro Display and SF Mono for authentic macOS styling
 
 ## 🚀 **Getting Started**
 
@@ -80,6 +92,71 @@ A fully functional macOS-style portfolio website with authentic desktop environm
 
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 🎵 **Adding Background Music**
+
+### Setting up Audio Files
+
+1. **Create audio directory**
+   ```bash
+   mkdir public/audio
+   ```
+
+2. **Add your audio files**
+   Place your audio files in `public/audio/` with names like:
+   - `audio1.mp3`
+   - `audio2.mp3` 
+   - `audio3.mp3`
+   - etc.
+
+3. **Update music configuration**
+   Edit `data/music-config.json` to add your tracks:
+   ```json
+   {
+     "audioFiles": [
+       {
+         "filename": "audio1.mp3",
+         "title": "Your Song Title",
+         "description": "Song description"
+       }
+     ],
+     "defaultVolume": 0.3,
+     "autoPlay": false
+   }
+   ```
+
+### Music Configuration Format
+
+The `data/music-config.json` file should follow this structure:
+
+```json
+{
+  "audioFiles": [
+    {
+      "filename": "string - The actual filename in public/audio/",
+      "title": "string - Display name for the track",
+      "description": "string - Brief description of the track"
+    }
+  ],
+  "defaultVolume": "number - Default volume (0.0 to 1.0)",
+  "autoPlay": "boolean - Whether to auto-play on load"
+}
+```
+
+### Changing the Number of Audio Files
+
+To change the number of audio files (k):
+
+1. Add/remove audio files from `public/audio/`
+2. Update the `audioFiles` array in `data/music-config.json`
+3. The system automatically detects the number of available tracks
+
+### Supported Audio Formats
+
+- MP3 (recommended)
+- WAV
+- OGG
+- M4A
 
 ## 📝 **Customization Guide**
 
@@ -121,10 +198,24 @@ style={{
 Customize dock icons in `components/dock.tsx`:
 \`\`\`typescript
 const dockApps = [
-  { type: "resume", title: "Resume", icon: "📄", color: "bg-blue-500" },
+  { type: "resume", title: "Resume", icon: "📄", color: "bg-gradient-to-br from-blue-400 to-blue-600" },
   // Change icons and colors here
 ]
 \`\`\`
+
+### 🎵 **Music Player Features**
+
+The music player includes:
+- Play/Pause controls
+- Previous/Next track navigation
+- Volume control with mute
+- Seek bar for jumping to specific times
+- Track information display
+- Playlist management
+
+Access the music player through:
+- Quick Settings panel (gear icon in menu bar)
+- Click "Music Player" → "Open"
 
 ### 🖥️ **Adding New Terminal Commands**
 
@@ -330,12 +421,17 @@ If you have any questions or need help customizing your portfolio:
 
 ### v2.0.0 (Latest)
 - ✅ Fully resizable and draggable windows
-- ✅ Enhanced terminal with 25+ commands
+- ✅ Enhanced terminal with 30+ commands and proper error handling
 - ✅ Keyboard shortcuts support
 - ✅ Context menu functionality
 - ✅ Auto-completion in terminal
 - ✅ ANSI color support
 - ✅ Window snapping and fullscreen mode
+- ✅ Background music system with full player controls
+- ✅ macOS-authentic fonts (SF Pro Display, SF Mono)
+- ✅ Enhanced neofetch with custom "ANIKET" ASCII art
+- ✅ Improved dark mode support
+- ✅ Fixed quick settings panel styling
 
 ### v1.0.0
 - ✅ Initial macOS desktop environment

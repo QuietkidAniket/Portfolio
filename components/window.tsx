@@ -31,8 +31,8 @@ export default function Window({ window, isActive, children, onClose, onMinimize
   const handleMouseMove = useCallback(
     (e: MouseEvent) => {
       if (isDragging) {
-        const newX = Math.max(0, Math.min(window.innerWidth - window.size.width, e.clientX - dragStart.x))
-        const newY = Math.max(24, Math.min(window.innerHeight - window.size.height - 100, e.clientY - dragStart.y))
+        const newX = Math.max(0, Math.min(globalThis.window.innerWidth - window.size.width, e.clientX - dragStart.x))
+        const newY = Math.max(24, Math.min(globalThis.window.innerHeight - window.size.height - 100, e.clientY - dragStart.y))
 
         onUpdate({
           position: { x: newX, y: newY },
@@ -63,8 +63,8 @@ export default function Window({ window, isActive, children, onClose, onMinimize
         }
 
         // Ensure window stays within bounds
-        newWidth = Math.min(newWidth, window.innerWidth - newX)
-        newHeight = Math.min(newHeight, window.innerHeight - newY - 100)
+        newWidth = Math.min(newWidth, globalThis.window.innerWidth - newX)
+        newHeight = Math.min(newHeight, globalThis.window.innerHeight - newY - 100)
 
         onUpdate({
           position: { x: newX, y: newY },
@@ -133,7 +133,7 @@ export default function Window({ window, isActive, children, onClose, onMinimize
       })
       onUpdate({
         position: { x: 0, y: 24 },
-        size: { width: window.innerWidth, height: window.innerHeight - 124 },
+        size: { width: globalThis.window.innerWidth, height: globalThis.window.innerHeight - 124 },
       })
       setIsFullscreen(true)
     }
@@ -206,7 +206,7 @@ export default function Window({ window, isActive, children, onClose, onMinimize
 
       {/* Window Header */}
       <div
-        className="window-header h-8 bg-gray-100/80 rounded-t-lg flex items-center justify-between px-4 cursor-grab active:cursor-grabbing select-none"
+        className="window-header h-8 bg-gray-100/80 backdrop-blur-md rounded-t-lg flex items-center justify-between px-4 cursor-grab active:cursor-grabbing select-none"
         onMouseDown={handleHeaderMouseDown}
         onDoubleClick={handleDoubleClick}
       >
@@ -235,7 +235,7 @@ export default function Window({ window, isActive, children, onClose, onMinimize
           </button>
         </div>
 
-        <div className="text-sm font-medium text-gray-700 flex-1 text-center pointer-events-none">{window.title}</div>
+        <div className="text-sm font-medium text-gray-700 flex-1 text-center pointer-events-none macos-font">{window.title}</div>
 
         <div className="w-16" />
       </div>

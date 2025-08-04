@@ -142,38 +142,21 @@ export default function TerminalApp({ data }: TerminalAppProps) {
       case "neofetch":
         setHistory((prev) => [
           ...prev,
-          "\x1b[36m                    -`                    \x1b[0m\x1b[33m" + data.basics.name + "\x1b[0m",
-          "\x1b[36m                   .o+`                   \x1b[0m\x1b[37m" +
-            "─".repeat(data.basics.name.length) +
-            "\x1b[0m",
-          "\x1b[36m                  `ooo/                   \x1b[0m\x1b[33mOS\x1b[0m: macOS Portfolio",
-          "\x1b[36m                 `+oooo:                  \x1b[0m\x1b[33mHost\x1b[0m: " + data.basics.location,
-          "\x1b[36m                `+oooooo:                 \x1b[0m\x1b[33mKernel\x1b[0m: Portfolio v2.0.0",
-          "\x1b[36m                -+oooooo+:                \x1b[0m\x1b[33mUptime\x1b[0m: " +
-            Math.floor(Date.now() / 1000 / 60) +
-            " minutes",
-          "\x1b[36m              `/:-:++oooo+:               \x1b[0m\x1b[33mPackages\x1b[0m: " +
-            (data.projects.length + data.achievements.length) +
-            " (portfolio)",
-          "\x1b[36m             `/++++/+++++++:              \x1b[0m\x1b[33mShell\x1b[0m: portfolio-sh",
-          "\x1b[36m            `/++++++++++++++:             \x1b[0m\x1b[33mResolution\x1b[0m: " +
-            window.innerWidth +
-            "x" +
-            window.innerHeight,
-          "\x1b[36m           `/+++ooooooooo+++/`           \x1b[0m\x1b[33mTerminal\x1b[0m: Portfolio Terminal",
-          "\x1b[36m          ./ooosssso++osssssso+`         \x1b[0m\x1b[33mCPU\x1b[0m: " +
-            navigator.hardwareConcurrency +
-            " cores",
-          "\x1b[36m         .oossssso-````/ossssss+`        \x1b[0m\x1b[33mMemory\x1b[0m: " +
-            Math.round(performance.memory?.usedJSHeapSize / 1024 / 1024 || 0) +
-            "MB",
-          "\x1b[36m        -osssssso.      :ssssssso.       \x1b[0m",
-          "\x1b[36m       :osssssss/        osssso+++.      \x1b[0m\x1b[31m███\x1b[32m███\x1b[33m███\x1b[34m███\x1b[35m███\x1b[36m███\x1b[37m███\x1b[0m",
-          "\x1b[36m      /ossssssss/        +ssssooo/-      \x1b[0m\x1b[31m███\x1b[32m███\x1b[33m███\x1b[34m███\x1b[35m███\x1b[36m███\x1b[37m███\x1b[0m",
-          "\x1b[36m    `/ossssso+/:-        -:/+osssso+-    \x1b[0m",
-          "\x1b[36m   `+sso+:-`                 `.-/+oso:  \x1b[0m",
-          "\x1b[36m  `++:.                           `-/+/ \x1b[0m",
-          "\x1b[36m  .`                                 `/ \x1b[0m",
+          "\x1b[36m      ██████╗ ███╗   ██╗██╗██╗  ██╗███████╗████████╗\x1b[0m    \x1b[33m" + data.basics.name + "\x1b[0m",
+          "\x1b[36m     ██╔══██╗████╗  ██║██║██║ ██╔╝██╔════╝╚══██╔══╝\x1b[0m    \x1b[37m" + "─".repeat(data.basics.name.length) + "\x1b[0m",
+          "\x1b[36m     ███████║██╔██╗ ██║██║█████╔╝ █████╗     ██║   \x1b[0m    \x1b[33mOS\x1b[0m: macOS Portfolio",
+          "\x1b[36m     ██╔══██║██║╚██╗██║██║██╔═██╗ ██╔══╝     ██║   \x1b[0m    \x1b[33mHost\x1b[0m: " + data.basics.location,
+          "\x1b[36m     ██║  ██║██║ ╚████║██║██║  ██╗███████╗   ██║   \x1b[0m    \x1b[33mKernel\x1b[0m: Portfolio v2.0.0",
+          "\x1b[36m     ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   \x1b[0m    \x1b[33mUptime\x1b[0m: " + Math.floor(Date.now() / 1000 / 60) + " minutes",
+          "\x1b[36m                                                    \x1b[0m    \x1b[33mPackages\x1b[0m: " + (data.projects.length + data.achievements.length) + " (portfolio)",
+          "\x1b[36m        ██████╗  ██████╗ ██████╗ ████████╗        \x1b[0m    \x1b[33mShell\x1b[0m: portfolio-sh",
+          "\x1b[36m        ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝        \x1b[0m    \x1b[33mResolution\x1b[0m: " + window.innerWidth + "x" + window.innerHeight,
+          "\x1b[36m        ██████╔╝██║   ██║██████╔╝   ██║           \x1b[0m    \x1b[33mTerminal\x1b[0m: Portfolio Terminal",
+          "\x1b[36m        ██╔═══╝ ██║   ██║██╔══██╗   ██║           \x1b[0m    \x1b[33mCPU\x1b[0m: " + navigator.hardwareConcurrency + " cores",
+          "\x1b[36m        ██║     ╚██████╔╝██║  ██║   ██║           \x1b[0m    \x1b[33mMemory\x1b[0m: " + Math.round(performance.memory?.usedJSHeapSize / 1024 / 1024 || 0) + "MB",
+          "\x1b[36m        ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝           \x1b[0m",
+          "                                                      \x1b[31m███\x1b[32m███\x1b[33m███\x1b[34m███\x1b[35m███\x1b[36m███\x1b[37m███\x1b[0m",
+          "                                                      \x1b[31m███\x1b[32m███\x1b[33m███\x1b[34m███\x1b[35m███\x1b[36m███\x1b[37m███\x1b[0m",
           "",
         ])
         break
@@ -312,6 +295,7 @@ export default function TerminalApp({ data }: TerminalAppProps) {
       case "pwd":
         setHistory((prev) => [...prev, "\x1b[36m/home/portfolio\x1b[0m", ""])
         break
+        
       case "cd":
       case "mkdir":
       case "touch":
@@ -326,7 +310,6 @@ export default function TerminalApp({ data }: TerminalAppProps) {
         ])
         break
 
-      // ─── Simulated Search & Env Commands ─────────────────────────────
       case "grep":
       case "find":
         setHistory((prev) => [
@@ -345,7 +328,6 @@ export default function TerminalApp({ data }: TerminalAppProps) {
         ])
         break
 
-      // ─── Simulated Dev Tool Commands ────────────────────────────────
       case "git":
       case "npm":
       case "node":
@@ -360,21 +342,24 @@ export default function TerminalApp({ data }: TerminalAppProps) {
         ])
         break
 
-      // ─── Unknown Command ────────────────────────────────────────────
+      case "ps":
+      case "top":
+        setHistory((prev) => [
+          ...prev,
+          "\x1b[33mPID    COMMAND\x1b[0m",
+          "1      portfolio-desktop",
+          "2      terminal-app",
+          "3      window-manager",
+          "",
+        ])
+        break
+
       default:
-        if (!availableCommands.includes(baseCmd)) {
-          setHistory((prev) => [
-            ...prev,
-            `\x1b[31mCommand not found: ${command}\x1b[0m. Type '\x1b[33mhelp\x1b[0m' for available commands.`,
-            "",
-          ])
-        } else {
-          setHistory((prev) => [
-            ...prev,
-            `\x1b[33m[Placeholder]:\x1b[0m '${baseCmd}' is recognized but not implemented.`,
-            "",
-          ])
-        }
+        setHistory((prev) => [
+          ...prev,
+          `\x1b[31mCommand not found: ${command}\x1b[0m. Type '\x1b[33mhelp\x1b[0m' for available commands.`,
+          "",
+        ])
     }
   }
 
@@ -427,7 +412,7 @@ export default function TerminalApp({ data }: TerminalAppProps) {
   }
 
   return (
-    <div className="h-full bg-black text-green-400 font-mono text-sm p-4 overflow-hidden relative">
+    <div className="h-full bg-black text-green-400 terminal-font text-sm p-4 overflow-hidden relative">
       <div
         ref={terminalRef}
         className="h-full overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent"
@@ -447,7 +432,7 @@ export default function TerminalApp({ data }: TerminalAppProps) {
             value={currentInput}
             onChange={(e) => setCurrentInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="flex-1 bg-transparent outline-none text-green-400 ml-1"
+            className="flex-1 bg-transparent outline-none text-green-400 ml-1 terminal-font"
             autoFocus
           />
         </div>

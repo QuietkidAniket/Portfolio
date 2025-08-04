@@ -1,0 +1,31 @@
+{
+  "audioFiles": [
+    {
+      "filename": "audio1.mp3",
+      "title": "Ambient Focus",
+      "description": "Calm ambient music for productivity"
+    },
+    {
+      "filename": "audio2.mp3", 
+      "title": "Lo-Fi Beats",
+      "description": "Relaxing lo-fi hip hop beats"
+    },
+    {
+      "filename": "audio3.mp3",
+      "title": "Nature Sounds",
+      "description": "Peaceful forest and rain sounds"
+    },
+    {
+      "filename": "audio4.mp3",
+      "title": "Classical Piano",
+      "description": "Gentle classical piano melodies"
+    },
+    {
+      "filename": "audio5.mp3",
+      "title": "Electronic Chill",
+      "description": "Downtempo electronic music"
+    }
+  ],
+  "defaultVolume": 0.3,
+  "autoPlay": false
+}
