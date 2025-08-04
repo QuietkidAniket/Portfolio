@@ -93,23 +93,25 @@ export default function Spotlight({ data, onOpenApp }: SpotlightProps) {
       icon: "🏅",
     })),
   ]
-
+  
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === " ") {
-        e.preventDefault()
-        setIsOpen(true)
-        setTimeout(() => inputRef.current?.focus(), 100)
-      } else if (e.key === "Escape") {
-        setIsOpen(false)
-        setQuery("")
-        setSelectedIndex(0)
-      }
-    }
+  const handleKeyDown = (e: KeyboardEvent) => {
+    console.log("KEY:", e.key, "META:", e.metaKey, "CTRL:", e.ctrlKey) // <-- debug
 
-    document.addEventListener("keydown", handleKeyDown)
-    return () => document.removeEventListener("keydown", handleKeyDown)
-  }, [])
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+      e.preventDefault()
+      setIsOpen(true)
+      setTimeout(() => inputRef.current?.focus(), 100)
+    } else if (e.key === "Escape") {
+      setIsOpen(false)
+      setQuery("")
+      setSelectedIndex(0)
+    }
+  }
+
+  document.addEventListener("keydown", handleKeyDown)
+  return () => document.removeEventListener("keydown", handleKeyDown)
+}, [])
 
   useEffect(() => {
     if (query.trim()) {

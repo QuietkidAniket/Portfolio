@@ -10,14 +10,62 @@ interface DockProps {
 }
 
 const dockApps = [
-  { type: "resume" as AppType, title: "Resume", icon: "📄", color: "bg-gradient-to-br from-blue-400 to-blue-600" },
-  { type: "achievements" as AppType, title: "Achievements", icon: "🏆", color: "bg-gradient-to-br from-yellow-400 to-orange-500" },
-  { type: "portfolio" as AppType, title: "Portfolio", icon: "🎨", color: "bg-gradient-to-br from-purple-400 to-pink-500" },
-  { type: "experience" as AppType, title: "Experience", icon: "💼", color: "bg-gradient-to-br from-green-400 to-emerald-500" },
-  { type: "projects" as AppType, title: "Projects", icon: "🚀", color: "bg-gradient-to-br from-red-400 to-rose-500" },
-  { type: "files" as AppType, title: "Files", icon: "📁", color: "bg-gradient-to-br from-gray-400 to-gray-600" },
-  { type: "terminal" as AppType, title: "Terminal", icon: "⚡", color: "bg-gradient-to-br from-gray-800 to-black" },
-  { type: "about" as AppType, title: "About Me", icon: "👤", color: "bg-gradient-to-br from-indigo-400 to-purple-500" },
+  {
+    type: "files",
+    title: "Files",
+    icon: "images/finder.png",
+    isImage: true,
+    color: "bg-gradient-to-br from-gray-400 to-gray-600",
+  },
+  {
+    type: "resume" as AppType,
+    title: "Resume",
+    icon: "/images/profile.png",
+    isImage: true,
+    color: "bg-transparent", // transparent icon, so use light bg
+  },
+  {
+    type: "achievements",
+    title: "Achievements",
+    icon: "🏆",
+    isImage: false,
+    color: "bg-gradient-to-br from-yellow-400 to-orange-500",
+  },
+  {
+    type: "portfolio",
+    title: "Portfolio",
+    icon: "/images/activity_monitor.png",
+    isImage: true,
+    color: "bg-gradient-to-br from-purple-400 to-pink-500",
+  },
+  {
+    type: "experience",
+    title: "Experience",
+    icon: "images/timemachine.webp",
+    isImage: true,
+    color: "bg-gradient-to-br from-green-400 to-emerald-500",
+  },
+  {
+    type: "projects",
+    title: "Projects",
+    icon: "images/apps.webp",
+    isImage: true,
+    color: "bg-gradient-to-br from-red-400 to-rose-500",
+  },
+  {
+    type: "terminal",
+    title: "Terminal",
+    icon: "images/terminal.png",
+    isImage: true,
+    color: "bg-gradient-to-br from-gray-800 to-black",
+  },
+  {
+    type: "about",
+    title: "About Me",
+    icon: "images/contacts.png",
+    isImage: true,
+    color: "bg-gradient-to-br from-indigo-400 to-purple-500",
+  },
 ]
 
 export default function Dock({ windows, onOpenApp, onFocusWindow }: DockProps) {
@@ -53,8 +101,18 @@ export default function Dock({ windows, onOpenApp, onFocusWindow }: DockProps) {
                     ${app.color} ${isOpen ? "ring-2 ring-white/50" : ""}
                     ${isHovered ? "transform scale-110" : ""}
                   `}
+                  style={
+                    app.isImage
+                      ? {
+                          backgroundImage: `url('${app.icon}')`,
+                          backgroundSize: "contain",
+                          backgroundPosition: "center",
+                          backgroundRepeat: "no-repeat",
+                        }
+                      : undefined
+                  }
                 >
-                  {app.icon}
+                  {!app.isImage && app.icon}
                 </button>
 
                 {isOpen && (

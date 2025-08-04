@@ -1,27 +1,26 @@
 import type { PortfolioData } from "@/types/portfolio"
-
 export const portfolioData: PortfolioData = {
   basics: {
     name: "Aniket Kundu",
     tagline: "Competitive Programmer | Full-stack Developer",
     location: "India",
-    email: "aniket@example.com",
-    phone: "+91-1234567890",
+    email: "aniketkundu12072004@gmail.com",
+    phone: "+91-9143254261",
     photo: "/placeholder.svg?height=128&width=128",
   },
   resume: {
-    downloadLink: "https://example.com/resume.pdf",
+    downloadLink: "/resume_august.pdf",
     summary:
-      "Passionate about building performance-oriented applications and solving complex algorithmic problems. Experienced in full-stack development with a strong foundation in competitive programming.",
+      "Performance-focused developer with a passion for solving complex algorithmic problems and building scalable applications. Experienced in full-stack and ML engineering, with a strong foundation in competitive programming and deep learning.",
     sections: [
       {
         title: "Education",
         items: [
           {
-            degree: "B.Tech Computer Science Engineering",
-            institute: "XYZ University",
-            year: "2021–2025",
-            gpa: "8.5/10",
+            degree: "B.Tech in Computer Science Engineering",
+            institute: "Vellore Institute of Technology, Chennai",
+            year: "2023–2027",
+            gpa: "8.7/10 (Highest SGPA: 9.21/10)",
           },
         ],
       },
@@ -40,110 +39,144 @@ export const portfolioData: PortfolioData = {
           "MongoDB",
           "Git",
           "Linux",
+          "TensorFlow",
+          "PyTorch",
+          "Selenium",
+          "Django REST",
         ],
       },
       {
         title: "Programming Languages",
-        items: ["C++", "Python", "JavaScript", "TypeScript", "Java", "Go"],
+        items: ["C++", "Python", "JavaScript", "TypeScript", "Java", "R", "Verilog", "x86 Shell", "ARM", "MySQL", "C"],
       },
       {
         title: "Technologies",
-        items: ["React", "Next.js", "Node.js", "Express", "MongoDB", "PostgreSQL", "Docker", "AWS"],
+        items: ["React", "Next.js", "Node.js", "Express", "MongoDB", "PostgreSQL", "Docker", "AWS", "HuggingFace", "LangChain"],
+      },
+      {
+        title: "Coursework",
+        items: [
+          "Data Structures & Algorithms",
+          "Design & Analysis of Algorithms",
+          "Computer Architecture",
+          "Operating Systems",
+          "Probability & Statistics",
+          "Discrete Mathematics & Graphs",
+          "Machine Learning",
+          "Deep Learning",
+          "Natural Language Processing",
+          "Complex Variables & Linear Algebra",
+        ],
       },
     ],
   },
   achievements: [
     {
-      title: "ACM ICPC Regionalist",
-      year: "2024",
-      description:
-        "Qualified for the regional round of ACM ICPC, demonstrating strong problem-solving skills and algorithmic thinking.",
+      title: "Zonal Rank 1, International Rank 18 - SOF NCO",
+      year: "2019",
+      description: "Secured Zonal Rank 1 and International Rank 18 in the National Cyber Olympiad by SOF.",
     },
     {
       title: "Codeforces Expert",
       year: "2023",
-      description:
-        "Achieved Expert rating (1600+) on Codeforces through consistent performance in competitive programming contests.",
+      description: "Achieved Expert rating on Codeforces: [profile](https://codeforces.com/profile/Anicetus_7).",
     },
     {
       title: "LeetCode Knight",
       year: "2023",
-      description: "Solved 500+ problems on LeetCode and achieved Knight badge for consistent problem-solving.",
+      description: "Earned Knight badge on LeetCode: [profile](https://leetcode.com/Anicetus_7/).",
     },
     {
-      title: "Hackathon Winner",
+      title: "CodeChef 3★",
       year: "2023",
-      description: "Won first place in university hackathon for developing an innovative web application.",
+      description: "Active competitive programmer on CodeChef: [profile](https://www.codechef.com/users/ani_23bce1965).",
+    },
+    {
+      title: "Machine Learning Specialization - Stanford",
+      year: "2023",
+      description: "[Coursera Certificate](https://www.coursera.org/account/accomplishments/specialization/P6AQ3FKS7TY9)",
+    },
+    {
+      title: "LangChain for LLM Development",
+      year: "2024",
+      description: "[Course Project](https://github.com/QuietkidAniket/StanfordOnline/blob/main/LangChain/)",
+    },
+    {
+      title: "Harvard CS50W - Web Programming with Python & JavaScript",
+      year: "2024",
+      description: "[edX Certificate](https://courses.edx.org/certificates/1bca14165d054f91b462067024f30454)",
+    },
+    {
+      title: "IIT Madras CS6910 - Deep Learning",
+      year: "2024",
+      description: "[Course Website](http://www.cse.iitm.ac.in/~miteshk/CS6910.html)",
+    },
+    {
+      title: "Introduction to On-Device AI by Qualcomm",
+      year: "2024",
+      description: "[Certificate](https://learn.deeplearning.ai/accomplishments/0913f96d-147c-4f9c-a5cd-b3fbf84c909d?usp=sharing)",
     },
   ],
   experience: [
     {
-      company: "Google Summer of Code",
-      role: "Open Source Contributor",
-      year: "2024",
+      company: "SpectoV",
+      role: "Machine Learning Intern",
+      year: "Sep 2024 – Feb 2025",
       description:
-        "Worked on improving the performance of a popular open-source library, contributing to core algorithms and documentation.",
+        "Worked in the DESKAVR team on intelligent meta-humans using multi-agentic models. Built resume Q&A systems using RAG with open-source LLMs (GROQ API), automated logistics report email systems via GCP APIs, and optimized the DEFXV model for production. Mentored in SANKALP. [SpectoV](https://www.spectov.com)",
     },
     {
-      company: "TechCorp Solutions",
-      role: "Software Development Intern",
-      year: "2023",
+      company: "Chakaralaya Analytics",
+      role: "Machine Learning Intern",
+      year: "Jun 2024 – Aug 2024",
       description:
-        "Developed and maintained web applications using React and Node.js, collaborated with senior developers on production systems.",
-    },
-    {
-      company: "StartupXYZ",
-      role: "Frontend Developer",
-      year: "2022",
-      description:
-        "Built responsive user interfaces and implemented modern web technologies to enhance user experience.",
+        "Worked under Dr. Sudarsanam S.K. (IIT Madras) on building a PyTorch-based MCDM library with GPU acceleration, pre-processing pipelines, and LLM fine-tuning for RAG. [Chakaralaya](https://www.chakaralaya.com)",
     },
   ],
   projects: [
     {
+      name: "Free GPT",
+      tech: ["Python", "PyTorch", "LangChain", "HuggingFace", "Mistral AI"],
+      description:
+        "Built a Multi-Agentic conversational system using LangChain and fine-tuned Mistral-7B-Instruct to mimic GPT-3.0. Deployed using HuggingFace inference API.",
+      link: "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3?inference_api=true",
+    },
+    {
       name: "Portfolio Website",
       tech: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-      description: "This macOS-style interactive portfolio website with functional terminal and window management.",
+      description:
+        "macOS-style interactive portfolio with terminal interface, window manager, and launchpad. Supports multiple commands and applications.",
       link: "https://github.com/aniket/portfolio",
     },
     {
       name: "Algorithm Visualizer",
       tech: ["React", "D3.js", "TypeScript"],
       description:
-        "Interactive web application for visualizing sorting and graph algorithms with step-by-step animations.",
+        "Visual tool for step-by-step animation of sorting and graph algorithms with interactive UI and educational feedback.",
       link: "https://github.com/aniket/algo-visualizer",
-    },
-    {
-      name: "Task Management API",
-      tech: ["Node.js", "Express", "MongoDB", "JWT"],
-      description: "RESTful API for task management with user authentication, CRUD operations, and real-time updates.",
-      link: "https://github.com/aniket/task-api",
     },
     {
       name: "Competitive Programming Solutions",
       tech: ["C++", "Python", "Algorithms"],
-      description: "Collection of optimized solutions for competitive programming problems from various platforms.",
+      description:
+        "Curated repository of optimized solutions for competitive programming problems across various platforms.",
       link: "https://github.com/aniket/cp-solutions",
     },
     {
       name: "E-commerce Platform",
       tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
       description:
-        "Full-stack e-commerce application with payment integration, inventory management, and admin dashboard.",
+        "Full-featured e-commerce app with payment gateway, admin dashboard, inventory management, and cart system.",
       link: "https://github.com/aniket/ecommerce",
-    },
-    {
-      name: "Chat Application",
-      tech: ["React", "Socket.io", "Node.js", "MongoDB"],
-      description: "Real-time chat application with multiple rooms, file sharing, and user authentication.",
-      link: "https://github.com/aniket/chat-app",
     },
   ],
   socials: {
-    github: "https://github.com/aniket",
-    linkedin: "https://linkedin.com/in/aniket",
+    github: "https://github.com/QuietkidAniket",
+    linkedin: "https://www.linkedin.com/in/anicetus/",
     codeforces: "https://codeforces.com/profile/Anicetus_7",
-    leetcode: "https://leetcode.com/Anicetus_7",
+    leetcode: "https://leetcode.com/Anicetus_7/",
+    codechef: "https://www.codechef.com/users/ani_23bce1965",
+    atcoder: "https://atcoder.jp/users/Anicetus_7",
   },
   cli: {
     commands: {
