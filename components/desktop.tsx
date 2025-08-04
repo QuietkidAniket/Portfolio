@@ -179,7 +179,7 @@ export default function Desktop({ data }: DesktopProps) {
     <div
       className="h-screen w-screen relative overflow-hidden"
       style={{
-        backgroundImage: `url('/images/san-francisco-background-bay.jpg?height=1080&width=1920')`,
+        backgroundImage: `url('images/san-francisco-background-bay.jpg?height=1080&width=1920')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

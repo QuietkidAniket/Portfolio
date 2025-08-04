@@ -20,7 +20,7 @@ const dockApps = [
   {
     type: "resume" as AppType,
     title: "Resume",
-    icon: "/images/profile.png",
+    icon: "images/profile.png",
     isImage: true,
     color: "bg-transparent", // transparent icon, so use light bg
   },
@@ -34,7 +34,7 @@ const dockApps = [
   {
     type: "portfolio",
     title: "Portfolio",
-    icon: "/images/activity_monitor.png",
+    icon: "images/activity_monitor.png",
     isImage: true,
     color: "bg-gradient-to-br from-purple-400 to-pink-500",
   },
