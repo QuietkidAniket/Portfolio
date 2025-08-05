@@ -94,9 +94,20 @@ export default function MusicPlayer({ isOpen, onClose }: MusicPlayerProps) {
         
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold macos-font">Music Player</h3>
-          <Button variant="ghost" size="sm" onClick={onClose}>
-            ✕
-          </Button>
+          <div className="flex space-x-2">
+            <Button variant="ghost" size="sm" onClick={() => {
+              if (audioRef.current) {
+                audioRef.current.pause()
+                audioRef.current.currentTime = 0
+              }
+              setIsPlaying(false)
+            }}>
+              Stop
+            </Button>
+            <Button variant="ghost" size="sm" onClick={onClose}>
+              ✕
+            </Button>
+          </div>
         </div>
 
         <div className="text-center mb-4">

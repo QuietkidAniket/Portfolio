@@ -75,6 +75,31 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
+/* Dark mode improvements */
+.dark .bg-white {
+  background-color: oklch(0.145 0 0) !important;
+}
+
+.dark .bg-gray-50 {
+  background-color: oklch(0.205 0 0) !important;
+}
+
+.dark .text-gray-900 {
+  color: oklch(0.985 0 0) !important;
+}
+
+.dark .text-gray-700 {
+  color: oklch(0.8 0 0) !important;
+}
+
+.dark .text-gray-600 {
+  color: oklch(0.708 0 0) !important;
+}
+
+.dark .border-gray-200 {
+  border-color: oklch(0.269 0 0) !important;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

@@ -177,6 +177,8 @@ export const portfolioData: PortfolioData = {
     leetcode: "https://leetcode.com/Anicetus_7/",
     codechef: "https://www.codechef.com/users/ani_23bce1965",
     atcoder: "https://atcoder.jp/users/Anicetus_7",
+    codechef: "https://www.codechef.com/users/ani_23bce1965",
+    atcoder: "https://atcoder.jp/users/Anicetus_7",
   },
   cli: {
     commands: {

@@ -52,6 +52,7 @@ export type AppType =
   | "files"
   | "terminal"
   | "about"
+  | "cpstats"
 
 export interface WindowState {
   id: string

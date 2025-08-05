@@ -14,6 +14,8 @@ export default function FilesApp({ data }: FilesAppProps) {
     { name: "LinkedIn", url: data.socials.linkedin, icon: "💼" },
     { name: "Codeforces", url: data.socials.codeforces, icon: "🏆" },
     { name: "LeetCode", url: data.socials.leetcode, icon: "💻" },
+    { name: "CodeChef", url: data.socials.codechef, icon: "🍳" },
+    { name: "AtCoder", url: data.socials.atcoder, icon: "🎯" },
   ]
 
   return (

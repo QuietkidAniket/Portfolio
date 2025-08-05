@@ -12,16 +12,19 @@ A fully functional macOS-style portfolio website with authentic desktop environm
 - **Menu Bar**: Live clock, system indicators, and user profile
 - **Dock**: Animated app launcher with hover effects and running app indicators
 - **Context Menu**: Right-click desktop for quick actions
+- **Keyboard Shortcuts Guide**: Semi-transparent guide showing all available shortcuts
+- **Mobile Support**: iOS-style interface for mobile devices with full-screen apps
 
 ### 🚀 **8 Functional Applications**
-1. **📄 Resume** - Interactive resume viewer with PDF download
+1. **📄 Resume** - Enhanced resume with skill cards and tech icons
 2. **🏆 Achievements** - Timeline of accomplishments and awards
-3. **🎨 Portfolio** - Project gallery with categorized views
+3. **📅 Calendar** - Event management system with multiple view modes
 4. **💼 Experience** - Professional work history timeline
 5. **🚀 Projects** - Detailed project showcase with tech stacks
 6. **📁 Files** - Quick access to social profiles and important links
 7. **⚡ Terminal** - Fully functional bash-like terminal with custom commands
 8. **👤 About Me** - Personal information and system details
+9. **📊 CP Stats** - Competitive programming statistics and achievements
 
 ### 🎵 **Background Music System**
 - **Music Player**: Full-featured music player with play/pause, skip, and volume controls
@@ -46,11 +49,15 @@ A fully functional macOS-style portfolio website with authentic desktop environm
   - `Cmd/Ctrl + Q`: Close all windows
   - `Cmd/Ctrl + H`: Minimize all windows
   - `Cmd/Ctrl + 1-8`: Quick launch apps
+  - `Cmd/Ctrl + K`: Open Spotlight search
+  - `Cmd/Ctrl + K`: Open Spotlight search
 - **Window Snapping**: Drag windows to screen edges
 - **Fullscreen Mode**: Double-click window header or use green button
 - **Multi-window Support**: Open multiple instances of different apps
 - **Fully Resizable Windows**: Drag window edges and corners to resize
 - **Smooth Animations**: macOS-style transitions and hover effects
+- **Mobile Support**: Full iOS-style interface for mobile devices
+- **Mobile Responsive**: iOS-style interface for mobile devices
 
 ## 🛠️ **Tech Stack**
 
@@ -158,6 +165,41 @@ To change the number of audio files (k):
 - OGG
 - M4A
 
+## 📅 **Calendar Events Configuration**
+
+### Setting up Calendar Events
+
+Edit `data/calendar-events.json` to add your events:
+
+```json
+{
+  "events": [
+    {
+      "id": "unique-id",
+      "title": "Event Title",
+      "date": "YYYY-MM-DD",
+      "startTime": "HH:MM",
+      "endTime": "HH:MM", 
+      "importance": "low|medium|high",
+      "reachable": true|false,
+      "location": "Event Location",
+      "description": "Event description",
+      "category": "work|competitive|deadline|personal"
+    }
+  ]
+}
+```
+
+### Event Properties
+- **id**: Unique identifier for the event
+- **title**: Event name/title
+- **date**: Event date in YYYY-MM-DD format
+- **startTime/endTime**: Time in HH:MM format (24-hour)
+- **importance**: Priority level (affects visual styling)
+- **reachable**: Whether you can be contacted during this event
+- **location**: Where the event takes place
+- **description**: Additional details about the event
+- **category**: Event type for categorization and icons
 ## 📝 **Customization Guide**
 
 ### 🔧 **Personal Information**
@@ -319,9 +361,12 @@ macos-portfolio/
 | `Cmd/Ctrl + Q` | Close all windows |
 | `Cmd/Ctrl + H` | Minimize all windows |
 | `Cmd/Ctrl + 1-8` | Quick launch apps (1=Resume, 2=Achievements, etc.) |
+| `Cmd/Ctrl + K` | Open Spotlight search |
 | `Tab` | Auto-complete terminal commands |
 | `↑/↓` | Navigate terminal command history |
 | `Esc` | Close terminal suggestions |
+| `Right Click` | Desktop context menu |
+| `Double Click` | Fullscreen window |
 
 ## 🖥️ **Terminal Commands**
 
@@ -432,6 +477,13 @@ If you have any questions or need help customizing your portfolio:
 - ✅ Enhanced neofetch with custom "ANIKET" ASCII art
 - ✅ Improved dark mode support
 - ✅ Fixed quick settings panel styling
+- ✅ Keyboard shortcuts guide
+- ✅ Enhanced resume with skill cards and tech icons
+- ✅ Clickable achievement cards with external links
+- ✅ Calendar app with event management
+- ✅ Competitive programming stats dashboard
+- ✅ Full mobile/iOS support with responsive design
+- ✅ Improved dark mode across all components
 
 ### v1.0.0
 - ✅ Initial macOS desktop environment

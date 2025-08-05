@@ -34,7 +34,8 @@ const dockApps = [
   {
     type: "portfolio",
     title: "Portfolio",
-    icon: "images/activity_monitor.png",
+    title: "Calendar",
+    icon: "📅",
     isImage: true,
     color: "bg-gradient-to-br from-purple-400 to-pink-500",
   },
@@ -65,6 +66,13 @@ const dockApps = [
     icon: "images/contacts.png",
     isImage: true,
     color: "bg-gradient-to-br from-indigo-400 to-purple-500",
+  },
+  {
+    type: "cpstats",
+    title: "CP Stats",
+    icon: "📊",
+    isImage: false,
+    color: "bg-gradient-to-br from-teal-400 to-cyan-500",
   },
 ]
 

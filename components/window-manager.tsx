@@ -10,6 +10,8 @@ import ProjectsApp from "./apps/projects-app"
 import FilesApp from "./apps/files-app"
 import TerminalApp from "./apps/terminal-app"
 import AboutApp from "./apps/about-app"
+import CalendarApp from "./apps/calendar-app"
+import CPStatsApp from "./apps/cp-stats-app"
 
 interface WindowManagerProps {
   windows: WindowState[]
@@ -37,7 +39,7 @@ export default function WindowManager({
       case "achievements":
         return <AchievementsApp data={data} />
       case "portfolio":
-        return <PortfolioApp data={data} />
+        return <CalendarApp />
       case "experience":
         return <ExperienceApp data={data} />
       case "projects":
@@ -48,6 +50,8 @@ export default function WindowManager({
         return <TerminalApp data={data} />
       case "about":
         return <AboutApp data={data} />
+      case "cpstats":
+        return <CPStatsApp data={data} />
       default:
         return <div>Unknown app</div>
     }

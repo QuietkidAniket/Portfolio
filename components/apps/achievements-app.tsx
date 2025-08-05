@@ -9,29 +9,69 @@ interface AchievementsAppProps {
 }
 
 export default function AchievementsApp({ data }: AchievementsAppProps) {
+  const getAchievementIcon = (title: string) => {
+    if (title.includes("Codeforces")) return "https://codeforces.org/s/0/favicon-16x16.png"
+    if (title.includes("LeetCode")) return "https://leetcode.com/favicon-16x16.png"
+    if (title.includes("CodeChef")) return "https://www.codechef.com/misc/favicon.ico"
+    if (title.includes("Stanford") || title.includes("Machine Learning")) return "https://stanford.edu/favicon.ico"
+    if (title.includes("Harvard")) return "https://harvard.edu/favicon.ico"
+    if (title.includes("IIT")) return "https://www.iitm.ac.in/favicon.ico"
+    if (title.includes("SOF") || title.includes("Olympiad")) return "🏆"
+    return "🎖️"
+  }
+
+  const extractLink = (description: string) => {
+    const linkMatch = description.match(/\[.*?\]\((.*?)\)/)
+    return linkMatch ? linkMatch[1] : null
+  }
+
   return (
-    <div className="h-full overflow-y-auto p-6 bg-gray-50">
+    <div className="h-full overflow-y-auto p-6 bg-gray-50 dark:bg-gray-900">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-gray-900 mb-2 flex items-center">
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 flex items-center">
           <Trophy className="w-6 h-6 mr-2 text-yellow-500" />
           Achievements
         </h1>
-        <p className="text-gray-600">Milestones and accomplishments</p>
+        <p className="text-gray-600 dark:text-gray-300">Milestones and accomplishments</p>
       </div>
 
-      <div className="space-y-4">
-        {data.achievements.map((achievement, index) => (
-          <Card key={index} className="hover:shadow-md transition-shadow">
-            <CardHeader>
-              <CardTitle className="flex items-center justify-between">
-                {achievement.title}
-                <div className="flex items-center text-sm text-gray-500">
-                  <Calendar className="w-4 h-4 mr-1" />
-                  {achievement.year}
-                </div>
-              </CardTitle>
-              <CardDescription>{achievement.description}</CardDescription>
-            </CardHeader>
+          const link = extractLink(achievement.description)
+          const icon = getAchievementIcon(achievement.title)
+          
+          const CardContent = (
+            <Card className="hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-pointer dark:bg-gray-800 dark:border-gray-700">
+              <CardHeader>
+                <CardTitle className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    {typeof icon === 'string' && icon.startsWith('http') ? (
+                      <img src={icon} alt="" className="w-6 h-6" />
+                    ) : (
+                      <span className="text-2xl">{icon}</span>
+                    )}
+                    <span className="dark:text-white">{achievement.title}</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                    <Calendar className="w-4 h-4 mr-1" />
+                    {achievement.year}
+                  </div>
+                </CardTitle>
+                <CardDescription className="dark:text-gray-300">
+                  {achievement.description.replace(/\[.*?\]\(.*?\)/g, '').trim()}
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          )
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div key={index}>
+              {link ? (
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  {CardContent}
+                </a>
+              ) : (
+                CardContent
+              )}
+            </div>
           </Card>
         ))}
       </div>

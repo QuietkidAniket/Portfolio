@@ -3,12 +3,15 @@
 import type React from "react"
 
 import { useState, useCallback, useEffect } from "react"
+import { useIsMobile } from "@/hooks/use-mobile"
 import MenuBar from "./menu-bar"
 import Dock from "./dock"
 import WindowManager from "./window-manager"
 import DesktopIcons from "./desktop-icons"
 import ContextMenu from "./context-menu"
 import Spotlight from "./spotlight"
+import KeyboardShortcutsGuide from "./keyboard-shortcuts-guide"
+import MobileDesktop from "./mobile-desktop"
 import type { PortfolioData, WindowState, AppType } from "@/types/portfolio"
 
 interface DesktopProps {
@@ -16,6 +19,7 @@ interface DesktopProps {
 }
 
 export default function Desktop({ data }: DesktopProps) {
+  const isMobile = useIsMobile()
   const [windows, setWindows] = useState<WindowState[]>([])
   const [activeWindow, setActiveWindow] = useState<string | null>(null)
   const [contextMenu, setContextMenu] = useState<{ x: number; y: number; visible: boolean }>({
@@ -175,6 +179,11 @@ export default function Desktop({ data }: DesktopProps) {
     return () => document.removeEventListener("click", hideContextMenu)
   }, [hideContextMenu])
 
+  // Mobile view
+  if (isMobile) {
+    return <MobileDesktop data={data} />
+  }
+
   return (
     <div
       className="h-screen w-screen relative overflow-hidden"
@@ -212,6 +221,7 @@ export default function Desktop({ data }: DesktopProps) {
       )}
 
       <Spotlight data={data} onOpenApp={openApp} />
+      <KeyboardShortcutsGuide />
     </div>
   )
 }
