@@ -165,7 +165,7 @@ export default function Spotlight({ data, onOpenApp }: SpotlightProps) {
             />
             <div className="flex items-center space-x-1 text-xs text-gray-400">
               <Command className="w-3 h-3" />
-              <span>Space</span>
+              <span>+ k</span>
             </div>
           </div>
 

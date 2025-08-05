@@ -58,46 +58,69 @@ export default function ResumeApp({ data }: ResumeAppProps) {
         </div>
 
         {/* Resume Sections */}
-        {data.resume.sections.map((section, index) => (
-          <div key={index} className="mb-8">
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 border-b-2 border-blue-500 pb-1">
-              {section.title}
-            </h2>
-            {section.title === "Skills" || section.title === "Technologies" || section.title === "Programming Languages" ? (
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {section.items.map((item, itemIndex) => (
-                  <div key={itemIndex} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg hover:shadow-md transition-shadow flex flex-col items-center text-center">
-                    {techLogos[item as string] && (
-                      <img src={techLogos[item as string]} alt={item as string} className="w-8 h-8 mb-2" />
-                    )}
-                    <span className="text-sm font-medium text-gray-900 dark:text-white">{item as string}</span>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="space-y-3">
-                {section.items.map((item, itemIndex) => (
-                  <div key={itemIndex} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-                    {typeof item === "string" ? (
-                      <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">
-                        {item}
-                      </span>
-                    ) : (
-                      <div>
-                        <h3 className="font-semibold text-gray-900 dark:text-white">
-                          {(item as any).degree || (item as any).title || "Item"}
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-300">{(item as any).institute || (item as any).company || ""}</p>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">{(item as any).year || (item as any).duration || ""}</p>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
+        {data.resume.sections.map((section, index) => {
+  const isSkillSection =
+    section.title === "Skills" ||
+    section.title === "Technologies" ||
+    section.title === "Programming Languages"
+
+  return (
+    <div key={index} className="mb-8">
+      <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 border-b-2 border-blue-500 pb-1">
+        {section.title}
+      </h2>
+
+      {isSkillSection ? (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {section.items.map((item, itemIndex) => (
+            <div
+              key={itemIndex}
+              className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg hover:shadow-md transition-shadow flex flex-col items-center text-center"
+            >
+              {techLogos[item as string] && (
+                <img
+                  src={techLogos[item as string]}
+                  alt={item as string}
+                  className="w-8 h-8 mb-2"
+                />
+              )}
+              <span className="text-sm font-medium text-gray-900 dark:text-white">
+                {item as string}
+              </span>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+      ) : (
+        <div className="space-y-3">
+          {section.items.map((item, itemIndex) => (
+            <div
+              key={itemIndex}
+              className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg"
+            >
+              {typeof item === "string" ? (
+                <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">
+                  {item}
+                </span>
+              ) : (
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">
+                    {(item as any).degree || (item as any).title || "Item"}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {(item as any).institute || (item as any).company || ""}
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    {(item as any).year || (item as any).duration || ""}
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+})}
       </div>
     </div>
   )

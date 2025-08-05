@@ -7,12 +7,12 @@ export default function KeyboardShortcutsGuide() {
   const [isVisible, setIsVisible] = useState(true)
 
   const shortcuts = [
-    { key: "⌘ + K", action: "Open Spotlight" },
-    { key: "⌘ + W", action: "Close Window" },
-    { key: "⌘ + M", action: "Minimize Window" },
-    { key: "⌘ + Q", action: "Close All Windows" },
-    { key: "⌘ + H", action: "Hide All Windows" },
-    { key: "⌘ + 1-8", action: "Quick Launch Apps" },
+    { key: "⌘/ctrl + K", action: "Open Spotlight" },
+    { key: "⌘/ctrl + W", action: "Close Window" },
+    { key: "⌘/ctrl + M", action: "Minimize Window" },
+    { key: "⌘/ctrl + Q", action: "Close All Windows" },
+    { key: "⌘/ctrl + H", action: "Hide All Windows" },
+    { key: "⌘/ctrl + 1-8", action: "Quick Launch Apps" },
     { key: "Right Click", action: "Context Menu" },
     { key: "Double Click", action: "Fullscreen Window" },
   ]
@@ -43,14 +43,14 @@ export default function KeyboardShortcutsGuide() {
         </button>
       </div>
       <div className="space-y-2">
-        {shortcuts.map((shortcut, index) => (
-          <div key={index} className="flex justify-between items-center">
-            <span className="text-gray-300">{shortcut.action}</span>
-            <kbd className="px-2 py-1 bg-white/10 rounded text-xs font-mono">
-              {shortcut.key}
-            </kbd>
-          </div>
-        ))}
+          {shortcuts.map((shortcut, index) => (
+            <div key={index} className="flex justify-between items-center">
+              <span className="text-gray-300">{shortcut.action}</span>
+              <kbd className="px-2 py-1 bg-white/10 rounded text-xs font-mono macos-font">
+                {shortcut.key}
+              </kbd>
+            </div>
+          ))}
       </div>
     </div>
   )

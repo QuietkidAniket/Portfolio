@@ -35,10 +35,12 @@ export default function AchievementsApp({ data }: AchievementsAppProps) {
         <p className="text-gray-600 dark:text-gray-300">Milestones and accomplishments</p>
       </div>
 
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {data.achievements.map((achievement, index) => {
           const link = extractLink(achievement.description)
           const icon = getAchievementIcon(achievement.title)
-          
-          const CardContent = (
+
+          const cardContent = (
             <Card className="hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-pointer dark:bg-gray-800 dark:border-gray-700">
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
@@ -62,18 +64,18 @@ export default function AchievementsApp({ data }: AchievementsAppProps) {
             </Card>
           )
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          return (
             <div key={index}>
               {link ? (
                 <a href={link} target="_blank" rel="noopener noreferrer">
-                  {CardContent}
+                  {cardContent}
                 </a>
               ) : (
-                CardContent
+                cardContent
               )}
             </div>
-          </Card>
-        ))}
+          )
+        })}
       </div>
     </div>
   )

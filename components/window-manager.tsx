@@ -4,7 +4,7 @@ import type { WindowState, PortfolioData } from "@/types/portfolio"
 import Window from "./window"
 import ResumeApp from "./apps/resume-app"
 import AchievementsApp from "./apps/achievements-app"
-import PortfolioApp from "./apps/portfolio-app"
+// import PortfolioApp from "./apps/portfolio-app"
 import ExperienceApp from "./apps/experience-app"
 import ProjectsApp from "./apps/projects-app"
 import FilesApp from "./apps/files-app"
@@ -38,7 +38,7 @@ export default function WindowManager({
         return <ResumeApp data={data} />
       case "achievements":
         return <AchievementsApp data={data} />
-      case "portfolio":
+      case "calender":
         return <CalendarApp />
       case "experience":
         return <ExperienceApp data={data} />

@@ -22,20 +22,19 @@ const dockApps = [
     title: "Resume",
     icon: "images/profile.png",
     isImage: true,
-    color: "bg-transparent", // transparent icon, so use light bg
+    color: "bg-gradient-to-br from-gray-400 to-gray-600", // transparent icon, so use light bg
   },
   {
     type: "achievements",
     title: "Achievements",
     icon: "🏆",
     isImage: false,
-    color: "bg-gradient-to-br from-yellow-400 to-orange-500",
+    color: "bg-gradient-to-br from-white-400 to-white-600",
   },
   {
-    type: "portfolio",
-    title: "Portfolio",
-    title: "Calendar",
-    icon: "📅",
+    type: "calender",
+    title: "calender",
+    icon: "images/events.jpg",
     isImage: true,
     color: "bg-gradient-to-br from-purple-400 to-pink-500",
   },
@@ -70,8 +69,8 @@ const dockApps = [
   {
     type: "cpstats",
     title: "CP Stats",
-    icon: "📊",
-    isImage: false,
+    icon: "images/cp.png",
+    isImage: true,
     color: "bg-gradient-to-br from-teal-400 to-cyan-500",
   },
 ]
