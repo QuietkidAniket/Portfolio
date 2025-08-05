@@ -88,7 +88,7 @@ export default function MusicPlayer({ isOpen, onClose }: MusicPlayerProps) {
       <div className="music-player rounded-xl shadow-2xl border border-gray-200/50 p-6 w-96 max-w-[90vw]">
         <audio
           ref={audioRef}
-          src={`/audio/${tracks[currentTrack].filename}`}
+          src={`audio/${tracks[currentTrack].filename}`}
           preload="metadata"
         />
         
