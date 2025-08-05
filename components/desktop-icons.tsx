@@ -7,7 +7,7 @@ interface DesktopIconsProps {
 }
 
 const desktopIcons = [
-  { type: "resume" as AppType, title: "Resume", icon: "/images/activity_monitor.png", x: 50, y: 100, isImage: true },
+  { type: "resume" as AppType, title: "Resume", icon: "images/activity_monitor.png", x: 50, y: 100, isImage: true },
   { type: "projects", title: "Projects", icon: "images/apps.webp", x: 50, y: 200, isImage: true },
   { type: "terminal", title: "Terminal", icon: "images/terminal.png", x: 50, y: 300, isImage: true },
   { type: "about", title: "About", icon: "images/profile_pic.png", x: 150, y: 100, isImage: true },
