@@ -23,7 +23,7 @@ export default function MenuBar({ data }: MenuBarProps) {
   return (
     <div className="h-6 bg-black/20 backdrop-blur-md border-b border-white/10 flex items-center justify-between px-4 text-white text-sm font-medium relative z-50 macos-font">
       <div className="flex items-center space-x-4">
-        <div className="font-bold">🍎</div>
+        <div className="font-bold"></div>
         <span>Portfolio</span>
       </div>
 

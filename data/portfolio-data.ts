@@ -6,10 +6,10 @@ export const portfolioData: PortfolioData = {
     location: "India",
     email: "aniketkundu12072004@gmail.com",
     phone: "+91-9143254261",
-    photo: "/placeholder.svg?height=128&width=128",
+    photo: "images/profile_pic.png",
   },
   resume: {
-    downloadLink: "/resume_august.pdf",
+    downloadLink: "resume_august.pdf",
     summary:
       "Performance-focused developer with a passion for solving complex algorithmic problems and building scalable applications. Experienced in full-stack and ML engineering, with a strong foundation in competitive programming and deep learning.",
     sections: [

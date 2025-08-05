@@ -7,9 +7,10 @@ interface DesktopIconsProps {
 }
 
 const desktopIcons = [
-  { type: "resume" as AppType, title: "Resume", icon: "📄", x: 50, y: 100 },
-  { type: "projects" as AppType, title: "Projects", icon: "🚀", x: 50, y: 200 },
-  { type: "terminal" as AppType, title: "Terminal", icon: "⚡", x: 50, y: 300 },
+  { type: "resume" as AppType, title: "Resume", icon: "/images/activity_monitor.png", x: 50, y: 100, isImage: true },
+  { type: "projects", title: "Projects", icon: "images/apps.webp", x: 50, y: 200, isImage: true },
+  { type: "terminal", title: "Terminal", icon: "images/terminal.png", x: 50, y: 300, isImage: true },
+  { type: "about", title: "About", icon: "images/profile_pic.png", x: 150, y: 100, isImage: true },
 ]
 
 export default function DesktopIcons({ onOpenApp }: DesktopIconsProps) {
@@ -23,8 +24,12 @@ export default function DesktopIcons({ onOpenApp }: DesktopIconsProps) {
           style={{ left: icon.x, top: icon.y }}
         >
           <div className="flex flex-col items-center space-y-1">
-            <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center text-2xl group-hover:bg-white/20 transition-colors shadow-lg">
-              {icon.icon}
+            <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center text-2xl group-hover:bg-white/20 transition-colors shadow-lg overflow-hidden">
+              {icon.isImage ? (
+                <img src={icon.icon} alt={icon.title} className="w-10 h-10 object-contain" />
+              ) : (
+                <span>{icon.icon}</span>
+              )}
             </div>
             <span className="text-white text-xs font-medium bg-black/50 px-2 py-1 rounded macos-font">{icon.title}</span>
           </div>

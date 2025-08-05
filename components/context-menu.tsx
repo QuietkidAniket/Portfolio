@@ -11,9 +11,9 @@ interface ContextMenuProps {
 }
 
 const contextMenuItems = [
-  { type: "resume" as AppType, title: "Resume", icon: "📄" },
+  { type: "resume" as AppType, title: "Resume", icon: "images/profile_pic.png" },
   { type: "terminal" as AppType, title: "Terminal", icon: "⚡" },
-  { type: "projects" as AppType, title: "Projects", icon: "🚀" },
+  { type: "projects" as AppType, title: "Projects", icon: "images/apps.webp" },
   { type: "about" as AppType, title: "About Me", icon: "👤" },
 ]
 
