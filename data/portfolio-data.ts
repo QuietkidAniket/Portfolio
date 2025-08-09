@@ -139,36 +139,29 @@ export const portfolioData: PortfolioData = {
       tech: ["Python", "PyTorch", "LangChain", "HuggingFace", "Mistral AI"],
       description:
         "Built a Multi-Agentic conversational system using LangChain and fine-tuned Mistral-7B-Instruct to mimic GPT-3.0. Deployed using HuggingFace inference API.",
-      link: "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3?inference_api=true",
+      link: "https://github.com/QuietkidAniket/StanfordOnline/tree/main/LangChain",
     },
     {
       name: "Portfolio Website",
       tech: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
       description:
         "macOS-style interactive portfolio with terminal interface, window manager, and launchpad. Supports multiple commands and applications.",
-      link: "https://github.com/aniket/portfolio",
-    },
-    {
-      name: "Algorithm Visualizer",
-      tech: ["React", "D3.js", "TypeScript"],
-      description:
-        "Visual tool for step-by-step animation of sorting and graph algorithms with interactive UI and educational feedback.",
-      link: "https://github.com/aniket/algo-visualizer",
+      link: "https://github.com/QuietkidAniket/Portfolio",
     },
     {
       name: "Competitive Programming Solutions",
       tech: ["C++", "Python", "Algorithms"],
       description:
         "Curated repository of optimized solutions for competitive programming problems across various platforms.",
-      link: "https://github.com/aniket/cp-solutions",
+      link: "https://github.com/QuietkidAniket/codeforces",
     },
-    {
-      name: "E-commerce Platform",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      description:
-        "Full-featured e-commerce app with payment gateway, admin dashboard, inventory management, and cart system.",
-      link: "https://github.com/aniket/ecommerce",
-    },
+    // {
+    //   name: "E-commerce Platform",
+    //   tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
+    //   description:
+    //     "Full-featured e-commerce app with payment gateway, admin dashboard, inventory management, and cart system.",
+    //   link: "https://github.com/aniket/ecommerce",
+    // },
   ],
   socials: {
     github: "https://github.com/QuietkidAniket",
@@ -177,8 +170,12 @@ export const portfolioData: PortfolioData = {
     leetcode: "https://leetcode.com/Anicetus_7/",
     codechef: "https://www.codechef.com/users/ani_23bce1965",
     atcoder: "https://atcoder.jp/users/Anicetus_7",
-    codechef: "https://www.codechef.com/users/ani_23bce1965",
-    atcoder: "https://atcoder.jp/users/Anicetus_7",
+  },
+  socialsDefaults: {
+    Codeforces: { rating: "1500 (pupil)", maxRating: "1600", problemsSolved: "200", contests: "15" },
+    LeetCode: { rating: "1700", maxRating: "1700", problemsSolved: "600", contests: "12" },
+    CodeChef: { rating: "1600 (3★)", maxRating: "1650", problemsSolved: "150", contests: "10" },
+    AtCoder: { rating: "1200 (green)", maxRating: "1250", problemsSolved: "80", contests: "5" }
   },
   cli: {
     commands: {

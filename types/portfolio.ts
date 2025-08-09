@@ -37,6 +37,14 @@ export interface PortfolioData {
     linkedin: string
     codeforces: string
     leetcode: string
+    codechef: string
+    atcoder: string
+  }
+  socialsDefaults: {
+    Codeforces: { rating: string; maxRating: string; problemsSolved: string; contests: string }
+    LeetCode: { rating: string; maxRating: string; problemsSolved: string; contests: string }
+    CodeChef: { rating: string; maxRating: string; problemsSolved: string; contests: string }
+    AtCoder: { rating: string; maxRating: string; problemsSolved: string; contests: string }
   }
   cli: {
     commands: Record<string, string>

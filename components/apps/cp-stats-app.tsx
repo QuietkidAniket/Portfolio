@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { TrendingUp, Trophy, Target, Award, ExternalLink } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import type { PortfolioData } from "@/types/portfolio"
@@ -14,56 +13,53 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
     {
       name: "Codeforces",
       url: data.socials.codeforces,
-      icon: "🔴",
-      rating: "1847 (Expert)",
-      maxRating: "1847",
-      problemsSolved: "500+",
-      contests: "45",
-      color: "from-red-400 to-red-600"
+      logo: "/images/codeforces.png", // <-- file path
+      rating: "1256 (pupil)",
+      maxRating: "1256",
+      problemsSolved: "100+",
+      contests: "9"
     },
     {
       name: "LeetCode", 
       url: data.socials.leetcode,
-      icon: "🟡",
-      rating: "Knight",
-      maxRating: "2100+",
-      problemsSolved: "800+",
-      contests: "25",
-      color: "from-yellow-400 to-orange-500"
+      logo: "/images/leetcode.png",
+      rating: "1708",
+      maxRating: "1700+",
+      problemsSolved: "500+",
+      contests: "17"
     },
     {
       name: "CodeChef",
       url: data.socials.codechef,
-      icon: "🟤",
+      logo: "/images/codechef.png",
       rating: "3★ (1600+)",
-      maxRating: "1650",
-      problemsSolved: "300+",
-      contests: "20",
-      color: "from-amber-600 to-yellow-600"
+      maxRating: "1600",
+      problemsSolved: "100+",
+      contests: "10"
     },
     {
       name: "AtCoder",
       url: data.socials.atcoder,
-      icon: "🔵",
-      rating: "Gray (800+)",
-      maxRating: "850",
-      problemsSolved: "150+",
-      contests: "10",
-      color: "from-blue-400 to-blue-600"
+      logo: "/images/atcoder.png",
+      rating: "179",
+      maxRating: "180",
+      problemsSolved: "30+",
+      contests: "10"
     }
   ]
 
   const achievements = [
-    "Codeforces Expert (Top 10%)",
-    "LeetCode Knight Badge",
+    // "Codeforces Expert (Top 10%)",
+    // "LeetCode Knight Badge",
     "CodeChef 3-Star Rating",
-    "500+ Problems Solved on Codeforces",
-    "800+ Problems Solved on LeetCode"
+    "200+ Problems Solved on Codeforces",
+    "500+ Problems Solved on LeetCode"
   ]
 
   return (
     <div className="h-full overflow-y-auto p-6 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-6xl mx-auto">
+        {/* Title */}
         <div className="mb-6">
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 flex items-center">
             <Trophy className="w-6 h-6 mr-2 text-yellow-500" />
@@ -72,31 +68,45 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
           <p className="text-gray-600 dark:text-gray-300">Performance across different coding platforms</p>
         </div>
 
-        {/* Platform Stats */}
+        {/* Platform Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {platforms.map((platform, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow dark:bg-gray-800 dark:border-gray-700">
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${platform.color} flex items-center justify-center text-white text-xl`}>
-                      {platform.icon}
-                    </div>
-                    <div>
-                      <h3 className="font-bold dark:text-white">{platform.name}</h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{platform.rating}</p>
-                    </div>
-                  </div>
-                  <a 
-                    href={platform.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                  </a>
-                </CardTitle>
-              </CardHeader>
+  <CardHeader className="flex flex-col items-center">
+    {/* Big Logo */}
+    <a href={platform.url} target="_blank" rel="noopener noreferrer">
+      <img 
+        src={platform.logo} 
+        alt={`${platform.name} logo`} 
+        className="w-40 h-20 object-contain mb-2" 
+      />
+    </a>
+
+    {/* Name */}
+    <h3 className="font-bold text-lg dark:text-white">{platform.name}</h3>
+    <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">{platform.rating}</p>
+
+    {/* Visit Button */}
+    <a
+      href={platform.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center px-3 py-1.5 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
+    >
+      Visit
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-4 w-4 ml-1"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={2}
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </a>
+  </CardHeader>
+
               <CardContent>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
@@ -121,8 +131,9 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
           ))}
         </div>
 
-        {/* Progress Charts Placeholder */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        {/* Progress & Achievements remain same
+                {/* Progress Charts Placeholder */}
+        {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           <Card className="dark:bg-gray-800 dark:border-gray-700">
             <CardHeader>
               <CardTitle className="flex items-center dark:text-white">
@@ -160,7 +171,7 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
               </div>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
 
         {/* Achievements */}
         <Card className="dark:bg-gray-800 dark:border-gray-700">
@@ -183,6 +194,7 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
             </div>
           </CardContent>
         </Card>
+        
       </div>
     </div>
   )
