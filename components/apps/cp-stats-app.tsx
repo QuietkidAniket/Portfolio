@@ -13,7 +13,7 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
     {
       name: "Codeforces",
       url: data.socials.codeforces,
-      logo: "/images/codeforces.png", // <-- file path
+      logo: "images/codeforces.png", // <-- file path
       rating: "1256 (pupil)",
       maxRating: "1256",
       problemsSolved: "100+",
@@ -22,7 +22,7 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
     {
       name: "LeetCode", 
       url: data.socials.leetcode,
-      logo: "/images/leetcode.png",
+      logo: "images/leetcode.png",
       rating: "1708",
       maxRating: "1700+",
       problemsSolved: "500+",
@@ -31,7 +31,7 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
     {
       name: "CodeChef",
       url: data.socials.codechef,
-      logo: "/images/codechef.png",
+      logo: "images/codechef.png",
       rating: "3★ (1600+)",
       maxRating: "1600",
       problemsSolved: "100+",
@@ -40,7 +40,7 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
     {
       name: "AtCoder",
       url: data.socials.atcoder,
-      logo: "/images/atcoder.png",
+      logo: "images/atcoder.png",
       rating: "179",
       maxRating: "180",
       problemsSolved: "30+",
