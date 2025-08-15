@@ -16,17 +16,17 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
       logo: "images/codeforces.png", // <-- file path
       rating: "1256 (pupil)",
       maxRating: "1256",
-      problemsSolved: "100+",
-      contests: "9"
+      problemsSolved: "200+",
+      contests: "10"
     },
     {
       name: "LeetCode", 
       url: data.socials.leetcode,
       logo: "images/leetcode.png",
-      rating: "1708",
-      maxRating: "1700+",
+      rating: "1750",
+      maxRating: "1750",
       problemsSolved: "500+",
-      contests: "17"
+      contests: "19"
     },
     {
       name: "CodeChef",
@@ -44,7 +44,7 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
       rating: "179",
       maxRating: "180",
       problemsSolved: "30+",
-      contests: "10"
+      contests: "6"
     }
   ]
 
