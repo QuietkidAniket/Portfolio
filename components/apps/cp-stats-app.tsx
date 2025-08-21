@@ -16,8 +16,8 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
       logo: "images/codeforces.png", // <-- file path
       rating: "1256 (pupil)",
       maxRating: "1256",
-      problemsSolved: "100+",
-      contests: "9"
+      problemsSolved: "200+",
+      contests: "10"
     },
     {
       name: "LeetCode", 
@@ -44,7 +44,7 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
       rating: "179",
       maxRating: "180",
       problemsSolved: "30+",
-      contests: "10"
+      contests: "6"
     }
   ]
 
