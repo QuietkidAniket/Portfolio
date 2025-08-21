@@ -23,10 +23,10 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
       name: "LeetCode", 
       url: data.socials.leetcode,
       logo: "images/leetcode.png",
-      rating: "1708",
-      maxRating: "1700+",
+      rating: "1856 (knight)",
+      maxRating: "1856",
       problemsSolved: "500+",
-      contests: "17"
+      contests: "19"
     },
     {
       name: "CodeChef",
@@ -53,7 +53,7 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
     // "LeetCode Knight Badge",
     "CodeChef 3-Star Rating",
     "200+ Problems Solved on Codeforces",
-    "500+ Problems Solved on LeetCode"
+    "knight (rating:1856) on Leetcode, 500+ Problems Solved"
   ]
 
   return (
