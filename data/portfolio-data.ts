@@ -172,10 +172,10 @@ export const portfolioData: PortfolioData = {
     atcoder: "https://atcoder.jp/users/Anicetus_7",
   },
   socialsDefaults: {
-    Codeforces: { rating: "1250 (pupil)", maxRating: "1250", problemsSolved: "100+", contests: "15" },
-    LeetCode: { rating: "1750", maxRating: "1750", problemsSolved: "500+", contests: "19" },
+    Codeforces: { rating: "1440 (pupil)", maxRating: "1440", problemsSolved: "100+", contests: "15" },
+    LeetCode: { rating: "2059", maxRating: "2059", problemsSolved: "600+", contests: "31" },
     CodeChef: { rating: "1600 (3★)", maxRating: "1650", problemsSolved: "70+", contests: "10" },
-    AtCoder: { rating: "179 (green)", maxRating: "200", problemsSolved: "30+", contests: "5" }
+    AtCoder: { rating: "191 (green)", maxRating: "200", problemsSolved: "30+", contests: "5" }
   },
   cli: {
     commands: {
