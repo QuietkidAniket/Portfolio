@@ -14,19 +14,19 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
       name: "Codeforces",
       url: data.socials.codeforces,
       logo: "images/codeforces.png", // <-- file path
-      rating: "1256 (pupil)",
-      maxRating: "1256",
-      problemsSolved: "200+",
+      rating: "1440+ (pupil)",
+      maxRating: "1440+",
+      problemsSolved: "300+",
       contests: "10"
     },
     {
       name: "LeetCode", 
       url: data.socials.leetcode,
       logo: "images/leetcode.png",
-      rating: "1856 (knight)",
-      maxRating: "1856",
-      problemsSolved: "500+",
-      contests: "19"
+      rating: "2050 (knight)",
+      maxRating: "2050",
+      problemsSolved: "600+",
+      contests: "31+"
     },
     {
       name: "CodeChef",
@@ -52,8 +52,8 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
     // "Codeforces Expert (Top 10%)",
     // "LeetCode Knight Badge",
     "CodeChef 3-Star Rating",
-    "200+ Problems Solved on Codeforces",
-    "knight (rating:1856) on Leetcode, 500+ Problems Solved"
+    "300+ Problems Solved on Codeforces",
+    "knight (rating:2050) on Leetcode, 600+ Problems Solved"
   ]
 
   return (
