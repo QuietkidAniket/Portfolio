@@ -9,7 +9,7 @@ export const portfolioData: PortfolioData = {
     photo: "images/profile_pic.png",
   },
   resume: {
-    downloadLink: "resume_august.pdf",
+    downloadLink: "resume_october.pdf",
     summary:
       "Performance-focused developer with a passion for solving complex algorithmic problems and building scalable applications. Experienced in full-stack and ML engineering, with a strong foundation in competitive programming and deep learning.",
     sections: [
