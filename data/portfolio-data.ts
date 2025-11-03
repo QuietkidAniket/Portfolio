@@ -78,22 +78,22 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: "Codeforces Expert",
-      year: "2023",
+      year: "2025",
       description: "Achieved Expert rating on Codeforces: [profile](https://codeforces.com/profile/Anicetus_7).",
     },
     {
       title: "LeetCode Knight",
-      year: "2023",
+      year: "2025",
       description: "Earned Knight badge on LeetCode: [profile](https://leetcode.com/Anicetus_7/).",
     },
     {
       title: "CodeChef 3★",
-      year: "2023",
+      year: "2025",
       description: "Active competitive programmer on CodeChef: [profile](https://www.codechef.com/users/ani_23bce1965).",
     },
     {
       title: "Machine Learning Specialization - Stanford",
-      year: "2023",
+      year: "2024",
       description: "[Coursera Certificate](https://www.coursera.org/account/accomplishments/specialization/P6AQ3FKS7TY9)",
     },
     {
@@ -103,7 +103,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: "Harvard CS50W - Web Programming with Python & JavaScript",
-      year: "2024",
+      year: "2022",
       description: "[edX Certificate](https://courses.edx.org/certificates/1bca14165d054f91b462067024f30454)",
     },
     {
