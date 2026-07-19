@@ -172,6 +172,7 @@ export const portfolioData: PortfolioData = {
           streaming nanosecond-precision RDTSC (Read Time-Stamp Counter) hardware metrics to a UI without\n \
           degrading core determinism.\n ",
       link: "https://github.com/QuietkidAniket/AeroHedge.git"
+    },
     {
       name: "Competitive Programming Solutions",
       tech: ["C++", "Algorithms"],
@@ -180,7 +181,6 @@ export const portfolioData: PortfolioData = {
       link: "https://github.com/QuietkidAniket/codeforces",
     },
     
-    },
     {
       name: "Portfolio Website",
       tech: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
