@@ -2,16 +2,16 @@ import type { PortfolioData } from "@/types/portfolio"
 export const portfolioData: PortfolioData = {
   basics: {
     name: "Aniket Kundu",
-    tagline: "Competitive Programmer | Full-stack Developer",
+    tagline: "ICPC Regionalist | Expert @ Codeforces | Distributed Systems | Knight @ Leetcode | CS @ VIT 2027",
     location: "India",
     email: "aniketkundu12072004@gmail.com",
     phone: "+91-9143254261",
     photo: "images/profile_pic.png",
   },
   resume: {
-    downloadLink: "resume_october.pdf",
+    downloadLink: "resume_july.pdf",
     summary:
-      "Performance-focused developer with a passion for solving complex algorithmic problems and building scalable applications. Experienced in full-stack and ML engineering, with a strong foundation in competitive programming and deep learning.",
+      "Interested in distributed Systems and High performance Computing.",
     sections: [
       {
         title: "Education",
@@ -28,30 +28,23 @@ export const portfolioData: PortfolioData = {
         title: "Skills",
         items: [
           "C++",
-          "Python",
-          "JavaScript",
-          "TypeScript",
-          "React",
-          "Next.js",
-          "Node.js",
           "Docker",
-          "SQL",
           "MongoDB",
-          "Git",
           "Linux",
-          "TensorFlow",
-          "PyTorch",
+          "Git",
+          "Python",
+          "SQL",
           "Selenium",
           "Django REST",
         ],
       },
       {
         title: "Programming Languages",
-        items: ["C++", "Python", "JavaScript", "TypeScript", "Java", "R", "Verilog", "x86 Shell", "ARM", "MySQL", "C"],
+        items: ["C++", "Python", "Java", "Oracle MySQL", "C"],
       },
       {
         title: "Technologies",
-        items: ["React", "Next.js", "Node.js", "Express", "MongoDB", "PostgreSQL", "Docker", "AWS", "HuggingFace", "LangChain"],
+        items: [ "MongoDB", "Docker", "AWS", "HuggingFace", "LangChain"],
       },
       {
         title: "Coursework",
@@ -82,14 +75,19 @@ export const portfolioData: PortfolioData = {
       description: "Achieved Expert rating on Codeforces: [profile](https://codeforces.com/profile/Anicetus_7).",
     },
     {
+      title: "ICPC Regionalist 2025",
+      year: "2025",
+      description: "International Collegiate Programming Contest Asia-West Amritapuri Regionals Rank 160 out of 309 teams",
+    },
+    {
       title: "LeetCode Knight",
       year: "2025",
       description: "Earned Knight badge on LeetCode: [profile](https://leetcode.com/Anicetus_7/).",
     },
     {
-      title: "CodeChef 3★",
+      title: "CodeChef 4★",
       year: "2025",
-      description: "Active competitive programmer on CodeChef: [profile](https://www.codechef.com/users/ani_23bce1965).",
+      description: "Active competitive programmer on CodeChef: [profile](https://www.codechef.com/users/Anicetus_7).",
     },
     {
       title: "Machine Learning Specialization - Stanford",
@@ -120,14 +118,14 @@ export const portfolioData: PortfolioData = {
   experience: [
     {
       company: "SpectoV",
-      role: "Machine Learning Intern",
+      role: "AI/Backend Engineer (Initial Team)",
       year: "Sep 2024 – Feb 2025",
       description:
         "Worked in the DESKAVR team on intelligent meta-humans using multi-agentic models. Built resume Q&A systems using RAG with open-source LLMs (GROQ API), automated logistics report email systems via GCP APIs, and optimized the DEFXV model for production. Mentored in SANKALP. [SpectoV](https://www.spectov.com)",
     },
     {
       company: "Chakaralaya Analytics",
-      role: "Machine Learning Intern",
+      role: "Software Engineer Intern",
       year: "Jun 2024 – Aug 2024",
       description:
         "Worked under Dr. Sudarsanam S.K. (IIT Madras) on building a PyTorch-based MCDM library with GPU acceleration, pre-processing pipelines, and LLM fine-tuning for RAG. [Chakaralaya](https://www.chakaralaya.com)",
@@ -168,14 +166,14 @@ export const portfolioData: PortfolioData = {
     linkedin: "https://www.linkedin.com/in/anicetus/",
     codeforces: "https://codeforces.com/profile/Anicetus_7",
     leetcode: "https://leetcode.com/Anicetus_7/",
-    codechef: "https://www.codechef.com/users/ani_23bce1965",
+    codechef: "https://www.codechef.com/users/anicetus_7",
     atcoder: "https://atcoder.jp/users/Anicetus_7",
   },
   socialsDefaults: {
-    Codeforces: { rating: "1440 (pupil)", maxRating: "1440", problemsSolved: "100+", contests: "15" },
+    Codeforces: { rating: "1601 (Expert)", maxRating: "1601", problemsSolved: "400+", contests: "20+" },
     LeetCode: { rating: "2059", maxRating: "2059", problemsSolved: "600+", contests: "31" },
-    CodeChef: { rating: "1600 (3★)", maxRating: "1650", problemsSolved: "70+", contests: "10" },
-    AtCoder: { rating: "191 (green)", maxRating: "200", problemsSolved: "30+", contests: "5" }
+    // CodeChef: { rating: "1600 (3★)", maxRating: "1650", problemsSolved: "70+", contests: "10" },
+    // AtCoder: { rating: "191 (green)", maxRating: "200", problemsSolved: "30+", contests: "5" }
   },
   cli: {
     commands: {
