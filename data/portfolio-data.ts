@@ -6,7 +6,7 @@ export const portfolioData: PortfolioData = {
     location: "India",
     email: "aniketkundu12072004@gmail.com",
     phone: "+91-9143254261",
-    photo: "images/profile_pic.png",
+    photo: "images/profile_pic.jpg",
   },
   resume: {
     downloadLink: "resume_july.pdf",
