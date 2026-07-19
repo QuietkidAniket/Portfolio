@@ -152,14 +152,26 @@ export const portfolioData: PortfolioData = {
           • Implemented a multi-threaded Reaper Daemon to prevent memory leaks and zombie processes by\
             auto-purging disconnected user sessions and dormant containers, enabling the server to scale efficiently to\
             1,000+ concurrent connections.",
+      link: "https://github.com/QuietkidAniket/DistW.git"
     },
     {
-      name: "Portfolio Website",
-      tech: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      name: "AeroHedge",
+      tech: ["C++", "Distributed I/O", "Lock Free Concurrency"],
       description:
-        "macOS-style interactive portfolio with terminal interface, window manager, and launchpad. Supports multiple commands and applications.",
-      link: "https://github.com/QuietkidAniket/Portfolio",
-    },
+        "A Zero-Allocation Option Hedging Engine with Algorithmic Simulation\n \
+          • Architected a deterministic, high-frequency options trading engine in Modern C++20, enforcing strict\n \
+          zero-allocation (heap-bypass) policies and branchless polynomial mathematics on the critical path to achieve\n \
+          sub-microsecond tick-to-trade execution.\n \
+        • Designed a lock-free concurrency model using SPSC ring buffers with strict atomic memory ordering\n \
+          (acquire/release), bypassing OS kernel scheduler context switches. Eradicated hardware false sharing via\n\
+          explicit 64-byte L1 cache-line alignment across explicitly pinned CPU cores.\n \
+        • Engineered a high-throughput distributed network layer utilizing Zero-Copy UDP multicast deserialization\n \
+          directly into optimally packed memory structs. Implemented a non-blocking TCP IPv4 gateway utilizing\n \
+          user-space spin-polling to aggressively manage exchange backpressure without yielding the CPU.\n \
+        • Built an out-of-band UDP fire-and-forget pipeline bridged to an asynchronous Python/WebSocket server,\n \
+          streaming nanosecond-precision RDTSC (Read Time-Stamp Counter) hardware metrics to a UI without\n \
+          degrading core determinism.\n ",
+      link: "https://github.com/QuietkidAniket/AeroHedge.git"
     {
       name: "Competitive Programming Solutions",
       tech: ["C++", "Algorithms"],
@@ -168,32 +180,15 @@ export const portfolioData: PortfolioData = {
       link: "https://github.com/QuietkidAniket/codeforces",
     },
     
-    {
-      name: "AeroHedge",
-      tech: ["C++", "Distributed I/O", "Lock Free Concurrency"],
-      description:
-        "A Zero-Allocation Option Hedging Engine with Algorithmic Simulation\
-          • Architected a deterministic, high-frequency options trading engine in Modern C++20, enforcing strict\
-          zero-allocation (heap-bypass) policies and branchless polynomial mathematics on the critical path to achieve\
-          sub-microsecond tick-to-trade execution.\
-        • Designed a lock-free concurrency model using SPSC ring buffers with strict atomic memory ordering\
-          (acquire/release), bypassing OS kernel scheduler context switches. Eradicated hardware false sharing via\
-          explicit 64-byte L1 cache-line alignment across explicitly pinned CPU cores.\
-        • Engineered a high-throughput distributed network layer utilizing Zero-Copy UDP multicast deserialization\
-          directly into optimally packed memory structs. Implemented a non-blocking TCP IPv4 gateway utilizing\
-          user-space spin-polling to aggressively manage exchange backpressure without yielding the CPU.\
-        • Built an out-of-band UDP fire-and-forget pipeline bridged to an asynchronous Python/WebSocket server,\
-          streaming nanosecond-precision RDTSC (Read Time-Stamp Counter) hardware metrics to a UI without\
-          degrading core determinism.",
     },
+    {
+      name: "Portfolio Website",
+      tech: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      description:
+        "macOS-style interactive portfolio with terminal interface, window manager, and launchpad. Supports multiple commands and applications.",
+      link: "https://github.com/QuietkidAniket/Portfolio",
+    }
     
-    // {
-    //   name: "E-commerce Platform",
-    //   tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    //   description:
-    //     "Full-featured e-commerce app with payment gateway, admin dashboard, inventory management, and cart system.",
-    //   link: "https://github.com/aniket/ecommerce",
-    // },
   ],
   socials: {
     github: "https://github.com/QuietkidAniket",
