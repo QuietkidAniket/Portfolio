@@ -2,7 +2,8 @@
 
 A fully functional macOS-style portfolio website with authentic desktop environment, window management, interactive terminal, and background music player. Built with Next.js, TypeScript, and Tailwind CSS.
 
-![Portfolio Preview](https://via.placeholder.com/800x500/1a1a1a/ffffff?text=macOS+Portfolio+Preview)
+
+<!-- ![Portfolio Preview]() -->
 
 ##  Features
 
