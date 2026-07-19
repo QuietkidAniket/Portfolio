@@ -14,16 +14,16 @@ export default function CPStatsApp({ data }: CPStatsAppProps) {
       name: "Codeforces",
       url: data.socials.codeforces,
       logo: "images/codeforces.png", // <-- file path
-      rating: "1440+ (pupil)",
-      maxRating: "1440+",
-      problemsSolved: "300+",
-      contests: "10"
+      rating: "1600+ (Expert)",
+      maxRating: "1600+",
+      problemsSolved: "500+",
+      contests: "20+"
     },
     {
       name: "LeetCode", 
       url: data.socials.leetcode,
       logo: "images/leetcode.png",
-      rating: "2050 (knight)",
+      rating: "2050+ (knight)",
       maxRating: "2050",
       problemsSolved: "600+",
       contests: "31+"
