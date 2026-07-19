@@ -1,12 +1,12 @@
-# 🍎 macOS Portfolio Website
+#  macOS Portfolio Website
 
 A fully functional macOS-style portfolio website with authentic desktop environment, window management, interactive terminal, and background music player. Built with Next.js, TypeScript, and Tailwind CSS.
 
 ![Portfolio Preview](https://via.placeholder.com/800x500/1a1a1a/ffffff?text=macOS+Portfolio+Preview)
 
-## ✨ Features
+##  Features
 
-### 🖥️ **Authentic macOS Desktop Experience**
+###  **Authentic macOS Desktop Experience**
 - **Desktop Environment**: Complete with wallpaper, menu bar, dock, and desktop icons
 - **Window Management**: Fully resizable and draggable windows with macOS-style controls
 - **Menu Bar**: Live clock, system indicators, and user profile
@@ -15,25 +15,25 @@ A fully functional macOS-style portfolio website with authentic desktop environm
 - **Keyboard Shortcuts Guide**: Semi-transparent guide showing all available shortcuts
 - **Mobile Support**: iOS-style interface for mobile devices with full-screen apps
 
-### 🚀 **8 Functional Applications**
-1. **📄 Resume** - Enhanced resume with skill cards and tech icons
-2. **🏆 Achievements** - Timeline of accomplishments and awards
-3. **📅 Calendar** - Event management system with multiple view modes
-4. **💼 Experience** - Professional work history timeline
-5. **🚀 Projects** - Detailed project showcase with tech stacks
-6. **📁 Files** - Quick access to social profiles and important links
-7. **⚡ Terminal** - Fully functional bash-like terminal with custom commands
-8. **👤 About Me** - Personal information and system details
-9. **📊 CP Stats** - Competitive programming statistics and achievements
+###  **8 Functional Applications**
+1. ** Resume** - Enhanced resume with skill cards and tech icons
+2. ** Achievements** - Timeline of accomplishments and awards
+3. ** Calendar** - Event management system with multiple view modes
+4. ** Experience** - Professional work history timeline
+5. ** Projects** - Detailed project showcase with tech stacks
+6. ** Files** - Quick access to social profiles and important links
+7. ** Terminal** - Fully functional bash-like terminal with custom commands
+8. ** About Me** - Personal information and system details
+9. ** CP Stats** - Competitive programming statistics and achievements
 
-### 🎵 **Background Music System**
+###  **Background Music System**
 - **Music Player**: Full-featured music player with play/pause, skip, and volume controls
 - **Multiple Tracks**: Support for multiple background music files
 - **Volume Control**: Adjustable volume with mute functionality
 - **Track Information**: Display track titles and descriptions
 - **Seek Control**: Jump to any part of the current track
 
-### 🖥️ **Advanced Terminal Features**
+###  **Advanced Terminal Features**
 - **Custom Commands**: 30+ portfolio-specific commands with proper error handling
 - **Auto-completion**: Tab completion for all commands
 - **Command History**: Navigate with arrow keys
@@ -42,7 +42,7 @@ A fully functional macOS-style portfolio website with authentic desktop environm
 - **macOS Terminal Font**: Authentic SF Mono font styling
 - **Enhanced Neofetch**: Custom ASCII art displaying "ANIKET" elegantly
 
-### 🎮 **Interactive Features**
+###  **Interactive Features**
 - **Keyboard Shortcuts**: 
   - `Cmd/Ctrl + W`: Close active window
   - `Cmd/Ctrl + M`: Minimize active window
@@ -59,7 +59,7 @@ A fully functional macOS-style portfolio website with authentic desktop environm
 - **Mobile Support**: Full iOS-style interface for mobile devices
 - **Mobile Responsive**: iOS-style interface for mobile devices
 
-## 🛠️ **Tech Stack**
+##  **Tech Stack**
 
 - **Framework**: Next.js 14 with App Router
 - **Language**: TypeScript
@@ -69,7 +69,7 @@ A fully functional macOS-style portfolio website with authentic desktop environm
 - **State Management**: React Hooks (useState, useCallback, useRef)
 - **Fonts**: SF Pro Display and SF Mono for authentic macOS styling
 
-## 🚀 **Getting Started**
+##  **Getting Started**
 
 ### Prerequisites
 - Node.js 18+ 
@@ -100,7 +100,7 @@ A fully functional macOS-style portfolio website with authentic desktop environm
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 🎵 **Adding Background Music**
+##  **Adding Background Music**
 
 ### Setting up Audio Files
 
@@ -220,7 +220,7 @@ export const portfolioData: PortfolioData = {
 }
 \`\`\`
 
-### 🎨 **Changing Background & Images**
+###  **Changing Background & Images**
 
 #### Desktop Wallpaper
 Update the background in `components/desktop.tsx`:
@@ -280,7 +280,7 @@ Access the music player through:
      break
    \`\`\`
 
-### 🎯 **Adding New Applications**
+###  **Adding New Applications**
 
 1. **Create app component** in `components/apps/`:
    \`\`\`typescript
@@ -304,7 +304,7 @@ Access the music player through:
 
 3. **Register app** in `components/dock.tsx` and `components/window-manager.tsx`
 
-### 🎨 **Customizing Themes**
+###  **Customizing Themes**
 
 #### Colors
 Update colors in `app/globals.css`:
@@ -352,7 +352,7 @@ macos-portfolio/
     └── images/              # Static images and assets
 \`\`\`
 
-## 🎮 **Keyboard Shortcuts**
+##  **Keyboard Shortcuts**
 
 | Shortcut | Action |
 |----------|--------|
@@ -405,16 +405,6 @@ Use ANSI color codes in terminal output:
 - `\\x1b[37m` - White
 - `\\x1b[0m` - Reset
 
-## 🚀 **Deployment**
-
-### Vercel (Recommended)
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically
-
-### Netlify
-1. Build the project: `npm run build`
-2. Deploy the `out` folder to Netlify
 
 ### GitHub Pages
 1. Add to `next.config.js`:
@@ -430,7 +420,7 @@ Use ANSI color codes in terminal output:
    \`\`\`
 2. Build and deploy: `npm run build`
 
-## 🤝 **Contributing**
+##  **Contributing**
 
 1. Fork the repository
 2. Create your feature branch: `git checkout -b feature/amazing-feature`
@@ -438,18 +428,18 @@ Use ANSI color codes in terminal output:
 4. Push to the branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
 
-## 📄 **License**
+##  **License**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 **Acknowledgments**
+##  **Acknowledgments**
 
 - Inspired by macOS Big Sur design language
 - Built with [Next.js](https://nextjs.org/)
 - UI components from [shadcn/ui](https://ui.shadcn.com/)
 - Icons from [Lucide](https://lucide.dev/)
 
-## 📞 **Support**
+##  **Support**
 
 If you have any questions or need help customizing your portfolio:
 
@@ -458,39 +448,3 @@ If you have any questions or need help customizing your portfolio:
 - 💬 Discussions: [GitHub Discussions](https://github.com/yourusername/macos-portfolio/discussions)
 
 ---
-
-⭐ **Star this repository if you found it helpful!**
-\`\`\`
-
-## 🔄 **Changelog**
-
-### v2.0.0 (Latest)
-- ✅ Fully resizable and draggable windows
-- ✅ Enhanced terminal with 30+ commands and proper error handling
-- ✅ Keyboard shortcuts support
-- ✅ Context menu functionality
-- ✅ Auto-completion in terminal
-- ✅ ANSI color support
-- ✅ Window snapping and fullscreen mode
-- ✅ Background music system with full player controls
-- ✅ macOS-authentic fonts (SF Pro Display, SF Mono)
-- ✅ Enhanced neofetch with custom "ANIKET" ASCII art
-- ✅ Improved dark mode support
-- ✅ Fixed quick settings panel styling
-- ✅ Keyboard shortcuts guide
-- ✅ Enhanced resume with skill cards and tech icons
-- ✅ Clickable achievement cards with external links
-- ✅ Calendar app with event management
-- ✅ Competitive programming stats dashboard
-- ✅ Full mobile/iOS support with responsive design
-- ✅ Improved dark mode across all components
-
-### v1.0.0
-- ✅ Initial macOS desktop environment
-- ✅ Basic window management
-- ✅ 8 portfolio applications
-- ✅ Simple terminal interface
-\`\`\`
-\`\`\`
-
-Let's also add some additional innovative features:
