@@ -133,11 +133,25 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
-      name: "Free GPT",
-      tech: ["Python", "PyTorch", "LangChain", "HuggingFace", "Mistral AI"],
+      name: "DistW",
+      tech: ["Modern C++", "Distributed Systems", "CMAKE", "Monaco ui"],
       description:
-        "Built a Multi-Agentic conversational system using LangChain and fine-tuned Mistral-7B-Instruct to mimic GPT-3.0. Deployed using HuggingFace inference API.",
-      link: "https://github.com/QuietkidAniket/StanfordOnline/tree/main/LangChain",
+        "A collaborative IDE featuring hierarchical locking for granular distributed workflow\
+          • Architected a real-time collaborative IDE workspace in C++20, utilizing uWebSockets for asynchronous\
+            I/O multiplexing to handle high-frequency keystroke broadcasts and low-latency state synchronization across\
+            remote teams.\
+          • Engineered a Hierarchical Distributed Lock Manager (HDLM) using a Trie-based prefix tree to solve\
+            collaborative edit collisions. This enforces pessimistic concurrency (granular file/folder locks) to guarantee\
+            atomic data integrity without the memory bloat of CRDTs (Conflict-free Replication Data Types).\
+          • Developed a Delta Engine powered by a vectorized line buffer to achieve amortized O(1) line-level\
+            insertions, enabling bandwidth-efficient text synchronization and Google Docs-style real-time multiplayer\
+            cursor tracking.\
+          • Built a pre-warmed Docker execution sandbox to safely compile and run untrusted user code. Achieved\
+            sub-300ms cold starts while using an Admin Dashboard to enforce strict resource caps (CPU/RAM/PIDs)\
+            to prevent malicious host exhaustion.\
+          • Implemented a multi-threaded Reaper Daemon to prevent memory leaks and zombie processes by\
+            auto-purging disconnected user sessions and dormant containers, enabling the server to scale efficiently to\
+            1,000+ concurrent connections.",
     },
     {
       name: "Portfolio Website",
@@ -148,11 +162,31 @@ export const portfolioData: PortfolioData = {
     },
     {
       name: "Competitive Programming Solutions",
-      tech: ["C++", "Python", "Algorithms"],
+      tech: ["C++", "Algorithms"],
       description:
         "Curated repository of optimized solutions for competitive programming problems across various platforms.",
       link: "https://github.com/QuietkidAniket/codeforces",
     },
+    
+    {
+      name: "AeroHedge",
+      tech: ["C++", "Distributed I/O", "Lock Free Concurrency"],
+      description:
+        "A Zero-Allocation Option Hedging Engine with Algorithmic Simulation\
+          • Architected a deterministic, high-frequency options trading engine in Modern C++20, enforcing strict\
+          zero-allocation (heap-bypass) policies and branchless polynomial mathematics on the critical path to achieve\
+          sub-microsecond tick-to-trade execution.\
+        • Designed a lock-free concurrency model using SPSC ring buffers with strict atomic memory ordering\
+          (acquire/release), bypassing OS kernel scheduler context switches. Eradicated hardware false sharing via\
+          explicit 64-byte L1 cache-line alignment across explicitly pinned CPU cores.\
+        • Engineered a high-throughput distributed network layer utilizing Zero-Copy UDP multicast deserialization\
+          directly into optimally packed memory structs. Implemented a non-blocking TCP IPv4 gateway utilizing\
+          user-space spin-polling to aggressively manage exchange backpressure without yielding the CPU.\
+        • Built an out-of-band UDP fire-and-forget pipeline bridged to an asynchronous Python/WebSocket server,\
+          streaming nanosecond-precision RDTSC (Read Time-Stamp Counter) hardware metrics to a UI without\
+          degrading core determinism.",
+    },
+    
     // {
     //   name: "E-commerce Platform",
     //   tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
