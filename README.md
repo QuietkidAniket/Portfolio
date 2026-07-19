@@ -78,24 +78,24 @@ A fully functional macOS-style portfolio website with authentic desktop environm
 ### Installation
 
 1. **Clone the repository**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/yourusername/macos-portfolio.git
    cd macos-portfolio
-   \`\`\`
+   ```
 
 2. **Install dependencies**
-   \`\`\`bash
+   ```bash
    npm install
    # or
    yarn install
-   \`\`\`
+   ```
 
 3. **Run the development server**
-   \`\`\`bash
+   ```bash
    npm run dev
    # or
    yarn dev
-   \`\`\`
+   ```
 
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
@@ -206,7 +206,7 @@ Edit `data/calendar-events.json` to add your events:
 
 Edit `data/portfolio-data.ts` to customize your portfolio:
 
-\`\`\`typescript
+```typescript
 export const portfolioData: PortfolioData = {
   basics: {
     name: "Your Name",
@@ -218,19 +218,19 @@ export const portfolioData: PortfolioData = {
   },
   // ... rest of your data
 }
-\`\`\`
+```
 
 ###  **Changing Background & Images**
 
 #### Desktop Wallpaper
 Update the background in `components/desktop.tsx`:
-\`\`\`typescript
+```typescript
 style={{
   backgroundImage: \`url('/your-wallpaper.jpg')\`,
   backgroundSize: "cover",
   backgroundPosition: "center",
 }}
-\`\`\`
+```
 
 #### Profile Photo
 1. Add your photo to `public/images/`
@@ -238,12 +238,12 @@ style={{
 
 #### App Icons
 Customize dock icons in `components/dock.tsx`:
-\`\`\`typescript
+```typescript
 const dockApps = [
   { type: "resume", title: "Resume", icon: "📄", color: "bg-gradient-to-br from-blue-400 to-blue-600" },
   // Change icons and colors here
 ]
-\`\`\`
+```
 
 ### 🎵 **Music Player Features**
 
@@ -262,15 +262,15 @@ Access the music player through:
 ### 🖥️ **Adding New Terminal Commands**
 
 1. **Add command to available commands list** in `components/apps/terminal-app.tsx`:
-   \`\`\`typescript
+   ```typescript
    const availableCommands = [
      // existing commands...
      'yournewcommand'
    ]
-   \`\`\`
+   ```
 
 2. **Implement command logic** in the `executeCommand` function:
-   \`\`\`typescript
+   ```typescript
    case "yournewcommand":
      setHistory((prev) => [
        ...prev,
@@ -278,12 +278,12 @@ Access the music player through:
        "",
      ])
      break
-   \`\`\`
+   ```
 
 ###  **Adding New Applications**
 
 1. **Create app component** in `components/apps/`:
-   \`\`\`typescript
+   ```typescript
    // components/apps/your-app.tsx
    export default function YourApp({ data }: { data: PortfolioData }) {
      return (
@@ -292,15 +292,15 @@ Access the music player through:
        </div>
      )
    }
-   \`\`\`
+   ```
 
 2. **Add app type** to `types/portfolio.ts`:
-   \`\`\`typescript
+   ```typescript
    export type AppType = 
      | "resume" | "achievements" | "portfolio" 
      | "experience" | "projects" | "files" 
      | "terminal" | "about" | "yourapp"
-   \`\`\`
+   ```
 
 3. **Register app** in `components/dock.tsx` and `components/window-manager.tsx`
 
@@ -308,26 +308,26 @@ Access the music player through:
 
 #### Colors
 Update colors in `app/globals.css`:
-\`\`\`css
+```css
 :root {
   --primary: your-color;
   --secondary: your-color;
   /* ... other color variables */
 }
-\`\`\`
+```
 
 #### Window Styling
 Modify window appearance in `components/window.tsx`:
-\`\`\`typescript
+```typescript
 className={\`
   absolute bg-white/95 backdrop-blur-md rounded-lg shadow-2xl
   // Add your custom classes
 \`}
-\`\`\`
+```
 
 ## 📁 **Project Structure**
 
-\`\`\`
+```
 macos-portfolio/
 ├── app/
 │   ├── globals.css          # Global styles and CSS variables
@@ -350,7 +350,7 @@ macos-portfolio/
 │   └── portfolio.ts         # TypeScript type definitions
 └── public/
     └── images/              # Static images and assets
-\`\`\`
+```
 
 ##  **Keyboard Shortcuts**
 
@@ -408,7 +408,7 @@ Use ANSI color codes in terminal output:
 
 ### GitHub Pages
 1. Add to `next.config.js`:
-   \`\`\`javascript
+   ```javascript
    /** @type {import('next').NextConfig} */
    const nextConfig = {
      output: 'export',
@@ -417,7 +417,7 @@ Use ANSI color codes in terminal output:
        unoptimized: true
      }
    }
-   \`\`\`
+   ```
 2. Build and deploy: `npm run build`
 
 ##  **Contributing**
